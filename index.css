@@ -1,9 +1,10 @@
 body {
     height: 100%;
-    background-color: rgb(255, 247, 235);
+    background: rgb(255,247,235);
+    background: radial-gradient(circle, rgba(255,247,235,1) 0%, rgba(255,230,194,1) 100%);
 }
 
-p { text-align: justify; }
+p, ul { text-align: justify; }
 .centered { text-align: center; }
 .smaller { font-size: .8em; }
 .btn-readmore { vertical-align: middle; }
@@ -26,7 +27,13 @@ img {
 }
 
 .big-heading { font-size: 3em; }
-.big-description { font-size: 1.1em; width: 90%; margin: 0 auto; }
+.big-description { 
+    font-size: 1.1em;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    font-style: italic;
+}
 
 #main-container {
     height: 100%;
@@ -47,19 +54,23 @@ img {
 
 .btn-ig {
     background: #f09433; 
-    border: none;
-    color: #fff;
     background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
     background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
     background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
 }
+.btn-telegram { background-color: #0088cc; }
+.btn-linkedin { background-color: #0072b1; }
 
-.btn-ig:hover, .btn-linkedin:hover {
+.btn-brand {
+    border: none;
+    color: #fff; 
+}
+
+.btn-brand:hover {
     color: #d3d3ff;
 }
 
-.btn-linkedin { background-color: #0072b1; border: none; color: #fff; }
 
 footer {
     background-color: #333;
@@ -70,6 +81,34 @@ footer {
 footer p { 
     text-align: center;
     font-size: 0.85em;
+}
+
+.event-desc p {
+    margin: 0;
+}
+
+.event-desc ul { text-align: justify; }
+
+.event-desc-1 { font-weight: bold; }
+
+.event-date {
+    font-style: italic;
+    float: right;
+}
+
+.event-list { 
+    list-style: none; 
+    padding-left: 0;
+}
+
+.event-list li {
+    margin-bottom: .5em;
+}
+
+.row-img { margin: 0 auto; }
+.caption {
+    font-size: .8em;
+    color: #777;
 }
 
 @media only screen and (max-width: 768px) {
