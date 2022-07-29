@@ -91,11 +91,6 @@ footer p {
 
 .event-desc-1 { font-weight: bold; }
 
-.event-date {
-    font-style: italic;
-    float: right;
-}
-
 .event-list { 
     list-style: none; 
     padding-left: 0;
@@ -118,6 +113,19 @@ footer p {
     
     /* remove unintended left/right margin for mobile view */
     .row { margin: 0 auto; }
+
+    /* layout 1: colored text beside event title */
+    .event-date { color: #999; }
+    .event-date::before { content: "("; }
+    .event-date::after  { content: ")"; }
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* layout 2: text to right of screen if screens are big enough */
+    .event-date {
+        float: right;
+    }    
 }
 
 @media only screen and (min-width: 1536px) {
