@@ -71,6 +71,10 @@ img {
     color: #d3d3ff;
 }
 
+header {
+    background: #ffd8d0;
+    background: linear-gradient(0deg, #ffffff 0%, #ffe4df 8%, #ffd8d0 100%);
+}
 
 footer {
     background-color: #333;
@@ -97,8 +101,10 @@ footer p {
 }
 
 .event-list li {
-    margin-bottom: .65em;
+    margin-bottom: .8em;
 }
+
+.event-award { color: #808080; }
 
 .row-img { margin: 0 auto; }
 .caption {
@@ -106,9 +112,21 @@ footer p {
     color: #777;
 }
 
+.nomargin {
+    margin: 0;
+}
+
+.nomargin-list li {
+    margin: 0;
+    list-style-type: disc;
+}
+
 @media only screen and (max-width: 768px) {
     #main-container {
         width: 100%;
+
+        /* no need for outer background for mobile view */
+        margin: 0 auto;
     }
     
     /* remove unintended left/right margin for mobile view */
