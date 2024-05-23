@@ -1,15 +1,62 @@
-.container {
-  text-align: center;
-  border: 1px solid black;
+.container-wrap {
+  overflow: hidden;
+  position: relative;
 }
 
-header, footer {
+.image-bg {
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+
+.container-inner {
+  text-align: center;
   border: 1px solid black;
+  position: relative;
+  opacity: 1;
+}
+
+header, article, footer {
+  /*border: 1px solid black;*/
   width: 80%;
   margin: 0 auto;
+  padding: 1.25em;
+}
+
+header {
+  background: linear-gradient(0deg, #eee 0%, #ffe4df 8%, #ffd8d0 100%);
+}
+
+article {
+  background-color: #eee;
 }
 
 footer {
   background-color: #2e2e2e;
   color: #e0e0e0;
+  font-size: 0.85em;
+}
+
+footer p {
+  margin: 0 auto;
+}
+
+.error-wrap {
+  color: rgb(80, 0, 0);
+  background-color: rgb(250, 189, 189);
+}
+
+.big {
+  font-size: 1.15em;
+}
+
+.nomargin {
+  margin: 0 auto;
+}
+
+p {
+  margin: 10px auto;
 }

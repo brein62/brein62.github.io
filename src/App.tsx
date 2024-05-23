@@ -1,19 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Button } from 'react-bootstrap';
-import Header from './primary/Header';
-import Footer from './primary/Footer';
+import MainWindow from './pages/MainWindow';
+import ErrorPage from './pages/ErrorPage';
+import { Route, Routes } from 'react-router-dom';
 
 /**
  * Main function for personal portfolio site.
  */
 function App() {
   return (
-    <div className="container container-sm">
-      <Header />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<MainWindow />} />
+      <Route path="*" element={<ErrorPage error="404 Not Found" errorDesc="The page requested could not be found." />} />
+    </Routes>
   );
 }
 
