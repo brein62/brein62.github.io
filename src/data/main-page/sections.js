@@ -1,16 +1,26 @@
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+
 const sections = {
   "sections": [
     {
       "title": "About Me & Experience",
       "img": [ "https://brein62.github.io/testimage-01.png", "https://brein62.github.io/testimage-01.png" ],
       "href": "/experience",
-      "content": "I am currently a Year 2 undergraduate studying Computer Science at the <a href=\"https://comp.nus.edu.sg/\">School of Computing, National University of Singapore (NUS)</a>. I have had many years of experience programming as a hobby beforehand."
+      "content": "I am currently a Year 2 undergraduate studying Computer Science at the <a href=\"https://www.comp.nus.edu.sg/\">School of Computing, National University of Singapore (NUS)</a>. I am proficient in many programming languages including Python, C++, HTML/CSS/JavaScript and Java and have done several software engineering projects in the past. I have had many years of experience programming as a hobby beforehand."
     },
     {
       "title": "Projects",
       "img": "https://brein62.github.io/testimage-01.png",
       "href": "/projects",
-      "content": "I have worked on several personal programming projects over the past few years. Click on the button below to learn more about what I have created so far!"
+      "buttons": [
+        {
+          "title": "GitHub profile",
+          "icon": faGithub,
+          "variant": "dark",
+          "href": "https://github.com/brein62"
+        }
+      ],
+      "content": "I have worked on several personal programming projects over the past few years, including school assignments, work-related projects and personal projects. Click on the button below to learn more about what I have created so far!"
     },
     {
       "title": "Competitions & Awards",

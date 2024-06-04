@@ -1,4 +1,3 @@
-import react from 'react';
 import MainPageSection from '../components/base/main-page/MainPageSection';
 import { useWindowParams } from '../hooks/useWindowParams';
 import sections from '../data/main-page/sections';
@@ -11,20 +10,27 @@ export default function MainBody() {
     return (
         <article>
             {
-                sections.sections.map((s, i) => (
-                    <>
-                        { i != 0 ? <MainPageDivider /> : <></> }
-                        <MainPageSection
-                            title={s.title}
-                            img={s.img}
-                            href={s.href}
-                            screenWidth={screenWidth}
-                            isFlipped={i % 2 !== 0}
-                            >
-                            <p className="big justify lastp" dangerouslySetInnerHTML={{__html: s.content}}></p>
-                        </MainPageSection>
-                    </>
-                ))
+                sections.sections.map((s, i) => {
+                    let buttons = undefined;
+                    if (s.buttons) {
+                        buttons = s.buttons;
+                    }
+                    return (
+                        <>
+                            { i !== 0 ? <MainPageDivider /> : <></> }
+                            <MainPageSection
+                                title={s.title}
+                                img={s.img}
+                                href={s.href}
+                                buttons={buttons}
+                                screenWidth={screenWidth}
+                                isFlipped={i % 2 !== 0}
+                                >
+                                <p className="big justify lastp" dangerouslySetInnerHTML={{__html: s.content}}></p>
+                            </MainPageSection>
+                        </>
+                    );
+                })
             }
         </article>
     );

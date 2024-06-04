@@ -89,8 +89,83 @@ p {
   margin-bottom: 0;
 }
 
-@media (max-width: 768px) {
+.event-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.event-list li {
+  margin-bottom: .8em;
+}
+
+.event-title {
+  float: left;
+}
+
+.subtitle {
+  text-align: left;
+}
+
+@media only screen and (max-width: 767.98px) {
   .container-inner {
     padding: 0;
   }
+  
+  .event-date::before {
+    content: "\00a0(";
+  }
+
+  .event-date {
+    color: #999;
+  }
+
+  .event-date::after {
+    content: ")";
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .event-date {
+    float: right;
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
+  #tab-modules {
+    padding-top: .6em;
+  }
+}
+
+.resume-entry p {
+  margin-bottom: .5em;
+}
+
+.resume-event, .subtitle {
+  margin-bottom: 0 !important;
+}
+
+.resume-entry {
+  margin-bottom: 1.5em !important;
+}
+
+.subtitle {
+  color: #808080;
+}
+
+hr { 
+  height: 1px;
+  width: 100% !important; 
+  margin: 0 auto !important; 
+  border: 5px !important; 
+  background-color: transparent !important; 
+  background-image: linear-gradient(to right, rgba(33, 37, 41, 0), rgba(33, 37, 41, 75), rgba(33, 37, 41, 100), rgba(33, 37, 41, 75), rgba(33, 37, 41, 0)) !important; 
+}
+
+.todo-study-logo {
+  font-family: monospace;
+  color: #00bf63;
+}
+
+.todo-study-logo-nocolor {
+  font-family: monospace;
 }
