@@ -1,4 +1,4 @@
-import ReadMoreButton from './ReadMoreButton';
+import ReadMoreButton from '../../buttons/ReadMoreButton';
 import Carousel from 'react-bootstrap/Carousel';
 import { Stack, Col, Container, Row, Image, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

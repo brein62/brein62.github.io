@@ -1,0 +1,165 @@
+import { Container, Stack } from "react-bootstrap";
+import { useWindowParams } from "../hooks/useWindowParams";
+import Header from "../primary/Header";
+import Footer from "../primary/Footer";
+import PageSection from "../components/base/side-pages/PageSection";
+import MainPageDivider from "../components/base/main-page/MainPageDivider";
+import HomePageButton from "../components/buttons/HomePageButton";
+import ProjectInfo from "../components/base/side-pages/ProjectInfo";
+import ProjectContainer from "../components/base/side-pages/ProjectContainer";
+import TodoStudyLogo from "../components/base/logos/TodoStudyLogo";
+import ProjectColumn from "../components/base/side-pages/ProjectColumn";
+import { useEffect } from "react";
+import LinkButton from "../components/buttons/LinkButton";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
+function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
+
+    // fix React bug when accessing anchors in the page
+    useEffect(() => {
+
+        // if anchor exists
+        if (document.location.hash) {
+
+            // go to anchor and scroll to anchor after 200ms
+            const aa = document.querySelector(document.location.hash);
+            setTimeout(()=> {
+                if (aa) aa.scrollIntoView({ behavior: "smooth", block: "start" })
+            }, 200);
+        }
+    }, []);
+
+    return (
+        <article>
+            <PageSection title="Projects">
+                <p className="big justify">Here is a list of projects I have done, ranging from simple ones to facilitate my learning to more advanced ones in a variety of programming languages and forms. Most of my project ideas are usually inspired from real-life examples, hobbies, or simple games that I have already planned to create.</p>
+                <p className="big justify">Most of my projects are published on my <a href="https://github.com/brein62">GitHub profile</a>, with school projects being published on the school organisation's profile.</p>
+                <Stack direction="horizontal" gap={3} className="justify-content-center d-flex">
+                    <LinkButton href="https://github.com/brein62" icon={ faGithub } variant="dark" direction="left">
+                        GitHub profile
+                    </LinkButton>
+                    <HomePageButton />
+                </Stack>
+            </PageSection>
+            <MainPageDivider />
+            <PageSection title="Personal Projects">
+                <ProjectContainer>
+                    <ProjectColumn screenWidth={screenWidth}>
+                        <ProjectInfo
+                            title="Canvas Downloader"
+                            date="Aug 2023 &ndash; Present"
+                            languages="Python"
+                            libraries="TKinter"
+                            apis="Canvas API"
+                            url="https://github.com/brein62/canvas-downloader"
+                            img="/projects/canvas-downloader.png">
+                            <p className="justify lastp">
+                                A simple cross-platform Python GUI application to download all files from the <a rel="noopener noreferrer" href="https://www.instructure.com/canvas">Canvas</a> learning management system (LMS), allowing students to automatically download and update all files from the Canvas LMS onto their own computer without having to manually download them. Makes use of the Canvas API. This is a Python port of the Canvas downloader feature I did for <TodoStudyLogo /> (my Orbital project).
+                            </p>
+                        </ProjectInfo>
+                        <ProjectInfo
+                            title="Personal Portfolio Website"
+                            date="Jul 2022 &ndash; Present"
+                            languages="HTML, CSS, JavaScript"
+                            libraries="React Router, Bootstrap, Font Awesome icons"
+                            frameworks="React"
+                            url="https://brein62.github.io">
+                            <p className="justify lastp">
+                                Yes, this very website itself! Initially starting off as a pure HTML/CSS/JavaScript web project in 2022, I remastered the entire website using React in 2024 to reduce redundant boilerplate code and allow for easier development and additions to the website.
+                            </p>
+                        </ProjectInfo>
+                        <ProjectInfo
+                            title="Online Budget Tracker"
+                            date="Jan 2020 &ndash; Feb 2021"
+                            languages="Google Apps Script (JavaScript)"
+                            img={ ["/projects/online-budget-tracker-1.png", "/projects/online-budget-tracker-2.png", "/projects/online-budget-tracker-3.png"] }>
+                            <p className="justify lastp">
+                                An expense tracker I maintained from Jan 2020 to Feb 2021 where I entered transactions onto a Google form and a summary of how much money I spent and have left is displayed on a Google Sheets spreadsheet. Although this project is customised for myself, I may produce templates (Google Forms and Google Sheets) to allow other people to use it in the future.
+                            </p>
+                        </ProjectInfo>
+                    </ProjectColumn>
+                    <ProjectColumn second screenWidth={screenWidth}>
+                        <ProjectInfo
+                            title="PT Workout Timer"
+                            date="Apr 2020"
+                            languages="HTML/CSS/JavaScript"
+                            libraries="Bootstrap"
+                            url="https://brein62.github.io/pt-timer"
+                            img="/projects/pt-timer.png">
+                            <p className="justify lastp">
+                                Made while I was serving National Service quarantining during Circuit Breaker. This PT Timer is based on a guideline HIIT workout routine created by Our Singapore Army. I am planning to update its UI in the near future.
+                            </p>
+                        </ProjectInfo>
+                        <ProjectInfo
+                            title="Very Simple Timer"
+                            date="21 May 2021"
+                            languages="HTML/CSS/JavaScript"
+                            url="https://brein62.github.io/very-simple-timer"
+                            >
+                            <p className="justify lastp">
+                                A very simple stopwatch application made in 1 day to experiment with vanilla JavaScript features and responsive web design.
+                            </p>
+                        </ProjectInfo>
+                    </ProjectColumn>
+                </ProjectContainer>
+            </PageSection>
+            <MainPageDivider />
+            <PageSection title="School Projects">
+                <p className="justify">These are projects that I did as part of school modules or assessments.</p>
+                <ProjectContainer>
+                    <ProjectColumn screenWidth={ screenWidth }>
+                        <ProjectInfo
+                            title={ <TodoStudyLogo /> }
+                            date="Orbital project (May 2023 &ndash; Aug 2023)"
+                            languages="HTML, CSS, JavaScript, Python, SQL"
+                            libraries="React Router, Material UI"
+                            frameworks="React"
+                            apis="Telegram API, Google OAuth integration, Canvas API, Supabase"
+                            url="https://todo-study-orbital.vercel.app"
+                            img="/projects/todo-study.png">
+                            <p className="justify">
+                                <TodoStudyLogo /> is a web application that allows students to study effectively by integrating multiple study features into one platform. It consists of several features, including a <strong>study timer</strong>, <strong>to-do list</strong>, <strong>note-taking</strong>, and <strong>Canvas LMS downloader</strong>. The application also includes a simple <strong>Telegram bot</strong> programmed in Python for reminders and easy sharing of notes within the app.
+                            </p>
+                            <p className="justify">
+                                This project was done as part of the NUS Orbital programme during my Year 1 summer break (summer 2023) with my friend. We managed to achieve an <a href="/awards#academic-achievements">Apollo 11 (advanced) achievement level</a> for the project.
+                            </p>
+                        </ProjectInfo>
+                    </ProjectColumn>
+                    <ProjectColumn second screenWidth={ screenWidth }>
+                        <ProjectInfo
+                            title="iVolunteer"
+                            date="CS2103T project (Aug 2023 &ndash; Nov 2023)"
+                            languages="Java"
+                            libraries="JavaFX, Jackson, JUnit5"
+                            url="https://github.com/AY2324S1-CS2103T-T14-4/tp"
+                            img="/projects/ivolunteer.png">
+                            <p className="justify">
+                                <strong>iVolunteer</strong> is a cross-platform Java volunteer management application, allowing volunteers and volunteer coordinators to plan and participate in volunteer events, handle roles, logistics and other materials swiftly and easily. This application combines the benefits of a <strong>command-line interface (CLI)</strong> with a <strong>graphical user interface</strong> to enhance volunteers' productivity when using the application.
+                            </p>
+                            <p className="justify">
+                                This project is one of many software development projects developed for the module <em>CS2103T Software Engineering</em>, and is based on the AddressBook-Level3 project created by the <a rel="noopener noreferrer" target="_blank" href="https://se-education.org/">SE-EDU initiative</a>.
+                            </p>
+                        </ProjectInfo>
+                    </ProjectColumn>
+                </ProjectContainer>
+            </PageSection>
+            <MainPageDivider />
+            <HomePageButton />
+        </article>
+    );
+}
+
+export default function Projects() {
+
+    const screenWidth = useWindowParams(true, false)[0];
+
+    return (
+        <div className="container-wrap">
+            <Container className="container container-inner container-sm">
+                <Header />
+                <ProjectsMainBody screenWidth={screenWidth}/>
+                <Footer />
+            </Container>
+        </div>
+    );
+}

@@ -5,9 +5,9 @@ import PageSection from '../components/base/side-pages/PageSection';
 import MainPageDivider from '../components/base/main-page/MainPageDivider';
 import ResumeEntry from '../components/base/side-pages/ResumeEntry';
 import ResumeList from '../components/base/side-pages/ResumeList';
-import UniGradesTab, { SuBadge } from '../components/base/side-pages/UniGradesTab';
+import UniGradesTab, { ProjectBadge, SuBadge, TopBadge } from '../components/base/side-pages/UniGradesTab';
 import JcGradesTab from '../components/base/side-pages/JcGradesTab';
-import HomePageButton from '../components/base/side-pages/HomePageButton';
+import HomePageButton from '../components/buttons/HomePageButton';
 import { useWindowParams } from '../hooks/useWindowParams';
 
 function ExperienceMainBody({ screenWidth } : {screenWidth : number}) {
@@ -36,6 +36,9 @@ function ExperienceMainBody({ screenWidth } : {screenWidth : number}) {
                                 <Accordion.Header>Coursework done and grades:</Accordion.Header>
                                 <Accordion.Body>
                                     <p className="justify"><strong>Note: </strong>For modules marked<SuBadge />, I have converted them to pass/fail such that these modules do not count towards my GPA. NUS allows 40 units (8 modules) to be converted to pass/fail over 4 years.</p>
+                                    <p className="justify">
+                                        For more information about the<TopBadge nolink /> and<ProjectBadge nolink name="" href="#" /> badges, click on the respective badge to find out about the projects and awards I have received for these modules!
+                                    </p>
                                     <UniGradesTab />
                                 </Accordion.Body>
                             </Accordion.Item>

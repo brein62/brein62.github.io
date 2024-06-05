@@ -5,7 +5,7 @@ import PageSection from '../components/base/side-pages/PageSection';
 import MainPageDivider from '../components/base/main-page/MainPageDivider';
 import ResumeEntry from '../components/base/side-pages/ResumeEntry';
 import ResumeList from '../components/base/side-pages/ResumeList';
-import HomePageButton from '../components/base/side-pages/HomePageButton';
+import HomePageButton from '../components/buttons/HomePageButton';
 import { useWindowParams } from '../hooks/useWindowParams';
 import { useEffect } from 'react';
 import TodoStudyLogo from '../components/base/logos/TodoStudyLogo';

@@ -1,4 +1,5 @@
 import { Badge, Col, Nav, Row, Tab } from 'react-bootstrap';
+import TodoStudyLogo from '../logos/TodoStudyLogo';
 
 export function SuBadge() {
     return (
@@ -18,13 +19,33 @@ function UnitsBadge({ units = 4 } : { units? : number }) {
     )
 }
 
-function TopBadge() {
+export function TopBadge({ nolink = false } : { nolink? : boolean }) {
     return (
+        !nolink ? 
         <a href="/awards/#academic-achievements">
             <Badge style={{ marginLeft: "0.3em" }} bg="warning">
                 Top Performer Award
             </Badge>
         </a>
+        :
+        <Badge style={{ marginLeft: "0.3em" }} bg="warning">
+            Top Performer Award
+        </Badge>
+    )
+}
+
+export function ProjectBadge({ nolink = false, name, href } : { nolink? : boolean, name : React.ReactNode, href : string }) {
+    return (
+        !nolink ? 
+            <a href={ href }>
+                <Badge style={{ marginLeft: "0.3em" }} bg="danger">
+                    { name ? <>Project ({ name })</> : <>Project</> }
+                </Badge>
+            </a>
+        : 
+        <Badge style={{ marginLeft: "0.3em" }} bg="danger">
+            { name ? <>Project ({ name })</> : <>Project</> }
+        </Badge>
     )
 }
 
@@ -126,6 +147,7 @@ export default function UniGradesTab() {
                                     <GradeEntry>
                                         <strong>CS2103T Software Engineering: </strong>A
                                         <UnitsBadge />
+                                        <ProjectBadge name="iVolunteer" href="/projects#school-projects" />
                                     </GradeEntry>
                                     <GradeEntry>
                                         <strong>CS2101 Effective Communication for Computing Professionals: </strong>B
@@ -144,6 +166,7 @@ export default function UniGradesTab() {
                                         <strong>CP2106 Independent Software Development Project (Orbital): </strong>CS - attained Apollo 11 (Advanced) achievement level. Done over Y1 summer.
                                         <UnitsBadge />
                                         <CsCuBadge />
+                                        <ProjectBadge name={<TodoStudyLogo green={ false } />} href="/projects#school-projects" />
                                     </GradeEntry>
                                 </ul>
                             </Tab.Pane>
