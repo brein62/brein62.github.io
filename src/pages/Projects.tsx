@@ -153,6 +153,8 @@ export default function Projects() {
 
     const screenWidth = useWindowParams(true, false)[0];
 
+    document.title = "Projects | Brendan Koh";
+
     return (
         <div className="container-wrap">
             <Container className="container container-inner container-sm">

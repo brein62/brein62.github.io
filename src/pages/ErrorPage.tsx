@@ -3,6 +3,8 @@ import { Container } from 'react-bootstrap';
 export default function ErrorPage({ error, errorDesc } : { error : string, errorDesc : string }) {
     
     // <img src="crumpled-paper-texture.jpg" className="image-bg" />
+
+    document.title = error + " :(";
     
     return (
         <div className="container-wrap">

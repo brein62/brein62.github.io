@@ -198,6 +198,8 @@ export default function Awards() {
 
     const screenWidth = useWindowParams(true, false)[0];
 
+    document.title = "Awards | Brendan Koh";
+
     return (
         <div className="container-wrap">
             <Container className="container container-inner container-sm">

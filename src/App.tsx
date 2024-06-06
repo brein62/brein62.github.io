@@ -10,6 +10,9 @@ import Projects from './pages/Projects';
  * Main function for personal portfolio site.
  */
 function App() {
+
+  document.title = "Personal Portfolio | Brendan Koh";
+
   return (
     <Routes>
       <Route path="/" element={<MainWindow />} />

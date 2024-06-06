@@ -11,6 +11,9 @@ import HomePageButton from '../components/buttons/HomePageButton';
 import { useWindowParams } from '../hooks/useWindowParams';
 
 function ExperienceMainBody({ screenWidth } : {screenWidth : number}) {
+
+    document.title = "About Me & Experience | Brendan Koh";
+
     return (
         <article>
             <PageSection title="About Me">
