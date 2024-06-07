@@ -39,7 +39,7 @@ export default function EventList({ children, screenWidth } : { children : React
 
 
     return (
-        <Stack gap={2}>
+        <Stack gap={3}>
             <CardGroup>
                 { (screenWidth >= 576) ?
                 <Card style={ { marginTop: "1em", height: "350px" } }>
@@ -66,20 +66,24 @@ export default function EventList({ children, screenWidth } : { children : React
                                 </div>
                             </Fade>
                         </Card> )
-                    : <Fade in={open}>
+                    : ( (active * 2 - 1) === children.length ? <></> :
+                    <Fade in={open}>
                         <Card style={{ marginTop: "1em" }}>
                             { children[active * 2 - 1] }
                         </Card>
                     </Fade>
+                    )
                 }
             </CardGroup>
-            <Pagination>
-                <Pagination.First onClick={ () => { setActiveN(1); } }/>
-                <Pagination.Prev onClick={ () => { if (active > 1) { setActiveN( active - 1 ); } else { setActiveN(pages); } } } />
-                { items }
-                <Pagination.Next onClick={ () => { if (active < pages) { setActiveN( active + 1 ); } else { setActiveN(1); } } } />
-                <Pagination.Last onClick={ () => { setActiveN( pages ); } } />
-            </Pagination>
+            <div style={{ margin: "0 auto" }}>
+                <Pagination>
+                    <Pagination.First onClick={ () => { setActiveN(1); } }/>
+                    <Pagination.Prev onClick={ () => { if (active > 1) { setActiveN( active - 1 ); } else { setActiveN(pages); } } } />
+                    { items }
+                    <Pagination.Next onClick={ () => { if (active < pages) { setActiveN( active + 1 ); } else { setActiveN(1); } } } />
+                    <Pagination.Last onClick={ () => { setActiveN( pages ); } } />
+                </Pagination>
+            </div>
         </Stack>
     )
 }
