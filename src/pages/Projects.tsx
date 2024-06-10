@@ -122,7 +122,7 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                                 <TodoStudyLogo /> is a web application that allows students to study effectively by integrating multiple study features into one platform. It consists of several features, including a <strong>study timer</strong>, <strong>to-do list</strong>, <strong>note-taking</strong>, and <strong>Canvas LMS downloader</strong>. The application also includes a simple <strong>Telegram bot</strong> programmed in Python for reminders and easy sharing of notes within the app.
                             </p>
                             <p className="justify">
-                                This project was done as part of the NUS Orbital programme during my Year 1 summer break (summer 2023) with my friend. We managed to achieve an <a href="/awards#academic-achievements">Apollo 11 (advanced) achievement level</a> for the project.
+                                This project was done as part of the NUS Orbital programme during my Year 1 summer break (summer 2023) with my friend. We managed to achieve an <a href="/#awards#academic-achievements">Apollo 11 (advanced) achievement level</a> for the project.
                             </p>
                         </ProjectInfo>
                     </ProjectColumn>

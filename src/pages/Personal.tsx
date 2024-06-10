@@ -32,7 +32,7 @@ function PersonalMainBody({ screenWidth } : { screenWidth : number } ) {
                     </TimelineEntry>
                     <TimelineEntry years="2012">
                         <p className="justify lastp">
-                            As I gained some knowledge and familiarity with programming, I tried creating a few <a href="/projects#early-projects">projects</a>! I created a few games using Game Maker and other programs using Visual Basic .NET, since it was included in Visual Studio and I found out that this could be used to write Windows programs. I even created a website using HTML, CSS, and JavaScript!
+                            As I gained some knowledge and familiarity with programming, I tried creating a few <a href="/#projects#early-projects">projects</a>! I created a few games using Game Maker and other programs using Visual Basic .NET, since it was included in Visual Studio and I found out that this could be used to write Windows programs. I even created a website using HTML, CSS, and JavaScript!
                         </p>
                     </TimelineEntry>
                     <TimelineEntry years="2013 &ndash; 2017">
@@ -47,7 +47,7 @@ function PersonalMainBody({ screenWidth } : { screenWidth : number } ) {
                     </TimelineEntry>
                     <TimelineEntry years="2020 &ndash; 2021">
                         <p className="justify lastp">
-                            I served National Service! Although I did not really focus too much on programming as I was focusing on my duties, I still managed to work on a few small programming projects, including a <a href="https://brein62.github.io/pt-timer">workout timer</a> and a <a href="/projects#online-budget-tracker">budget tracking application</a> using Google Sheets!
+                            I served National Service! Although I did not really focus too much on programming as I was focusing on my duties, I still managed to work on a few small programming projects, including a <a href="https://brein62.github.io/pt-timer">workout timer</a> and a <a href="/#projects#online-budget-tracker">budget tracking application</a> using Google Sheets!
                         </p>
                     </TimelineEntry>
                     <TimelineEntry years="2022 &ndash; Present">
