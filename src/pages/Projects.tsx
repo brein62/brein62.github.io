@@ -95,6 +95,7 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                             date="21 May 2021"
                             languages="HTML/CSS/JavaScript"
                             url="https://brein62.github.io/very-simple-timer"
+                            img={["/projects/very-simple-timer/light-mode.png", "/projects/very-simple-timer/dark-mode.png"]}
                             >
                             <p className="justify lastp">
                                 A very simple stopwatch application made in 1 day to experiment with vanilla JavaScript features and responsive web design.
@@ -131,7 +132,7 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                             date="CS2103T project (Aug 2023 &ndash; Nov 2023)"
                             languages="Java"
                             libraries="JavaFX, Jackson, JUnit5"
-                            url="https://github.com/AY2324S1-CS2103T-T14-4/tp"
+                            url={[{"name": "Repository", "url": "https://github.com/AY2324S1-CS2103T-T14-4/tp"}, {"name": "User Guide", "url": "https://AY2324S1-CS2103T-T14-4.github.io/tp"}]}
                             img="/projects/ivolunteer.png">
                             <p className="justify">
                                 <strong>iVolunteer</strong> is a cross-platform Java volunteer management application, allowing volunteers and volunteer coordinators to plan and participate in volunteer events, handle roles, logistics and other materials swiftly and easily. This application combines the benefits of a <strong>command-line interface (CLI)</strong> with a <strong>graphical user interface</strong> to enhance volunteers' productivity when using the application.
@@ -139,6 +140,58 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                             <p className="justify">
                                 This project is one of many software development projects developed for the module <em>CS2103T Software Engineering</em>, and is based on the AddressBook-Level3 project created by the <a rel="noopener noreferrer" target="_blank" href="https://se-education.org/">SE-EDU initiative</a>.
                             </p>
+                        </ProjectInfo>
+                    </ProjectColumn>
+                </ProjectContainer>
+            </PageSection>
+            <MainPageDivider />
+            <PageSection title="Early Projects">
+                <p className="justify">These are projects that I did in my early years of programming.</p>
+                <ProjectContainer>
+                    <ProjectColumn screenWidth={ screenWidth }>
+                        <ProjectInfo
+                            title="Crash Maze"
+                            date="Sep 2012 &ndash; Oct 2012"
+                            languages="Game Maker Studio"
+                            gap
+                            url={[ {"name": "Windows only", "url": "https://drive.google.com/file/d/18KXXXTmbd4es4LVqRAxc1sHyvpXtLRCx/view?usp=drive_link"} ]}
+                            img={["/projects/crash-maze/crash-maze.png", "/projects/crash-maze/crash-maze-menu.png", "/projects/crash-maze/crash-maze-2.png", "/projects/crash-maze/crash-maze-old.jpg"]}>
+                            <p className="justify">
+                                <strong>Crash Maze</strong> is a puzzle game I developed using Game Maker Studio during my primary school years (2012) consisting of 21 levels. The game involves a character moving around in a grid trying to collect coins and diamonds while avoiding enemies in order to get the flag and beat the level. The game is quite easy and you can speedrun the game in 5 minutes if you want to try it out!
+                            </p>
+                        </ProjectInfo>
+                        <ProjectInfo
+                            title="Old 2012 Website"
+                            date="2012"
+                            languages="HTML, CSS, JavaScript"
+                            url="https://brenlimits00.coffeecup.com"
+                            >
+                            <p className="justify">
+                                Old website made using <a href="https://www.coffeecup.com/html-editor/">CoffeeCup HTML Editor</a> and hosted on their web servers. Contains a lot of mini-applications, such as calculators, made in HTML/CSS/JavaScript.
+                            </p>
+                        </ProjectInfo>
+                    </ProjectColumn>
+                    <ProjectColumn second screenWidth={ screenWidth }>
+                        <ProjectInfo
+                            title="Other Projects"
+                            date="Jan 2012 &ndash; Feb 2012"
+                            languages="Visual Basic .NET"
+                            url={[ {"name": "Windows only", "url": "https://drive.google.com/drive/folders/18Hfh_lgUndNHeWKvfL-Vhl-nNkxBnEhE?usp=drive_link"} ]}>
+                            <p className="justify">
+                                I developed several basic applications using Visual Basic .NET in my primary school years (2012). These included some simple games, as well as calculators which helped me to learn basic programming skills back then. The apps include:
+                            </p>
+                            <ul className="justify">
+                                <li><strong>3 Row Attacker Edition 1:</strong> A simple game where you try to shoot all targets by clicking a button/pressing a key on the keyboard. You win when you reach 0 shoots left on all targets.</li>
+                                <li><strong>A Very Simple Timer:</strong> A very simple stopwatch that times in intervals of 1 second.</li>
+                                <li><strong>Burger Earning Game 1:</strong> A game where you try to earn money by selling burgers.</li>
+                                <li><strong>Burger Earning Game 2 - Shop Edition:</strong> A game where you try to earn money by selling items.</li>
+                                <li><strong>Calc 1100:</strong> A simple calculator that can do addition, subtraction, multiplication, division, exponentiation, reciprocal, modulo, and convert decimal to octal/hexadecimal.</li>
+                                <li><strong>Calc 2000:</strong> A slightly more advanced calculator with more functions and a keypad.</li>
+                                <li><strong>Calculator:</strong> Same as <em>Calc 1100</em> above.</li>
+                                <li><strong>Quiz1:</strong> A simple quiz game with 2 math questions.</li>
+                                <li><strong>Simple Calculator - With Fraction to Decimal Function:</strong> A calculator with the 4 basic operations but can also calculate the decimal values of fractions.</li>
+                                <li><strong>Stopwatch:</strong> A very simple stopwatch that times in intervals of 10 milliseconds (though the milliseconds counter isn't very accurate...)</li>
+                            </ul>
                         </ProjectInfo>
                     </ProjectColumn>
                 </ProjectContainer>

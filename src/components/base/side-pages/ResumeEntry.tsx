@@ -3,9 +3,9 @@ export default function ResumeEntry({title, dates, subtitle, screenWidth, childr
         <li className="resume-entry">
             <p className="resume-event">
                 <strong className="event-title">{ title }</strong>
-                <span className="event-date">{ dates }</span>
+                { dates !== "" ? <span className="event-date">{ dates }</span> : <></> }
             </p>
-            { (screenWidth >= 768) ? <br /> : <></> }
+            { (screenWidth >= 768 || (dates === "" && screenWidth < 768)) ? <br /> : <></> }
             { (subtitle !== undefined) ? ( <>
                 <p className="subtitle">{ subtitle }</p>
             </>

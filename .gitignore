@@ -2,6 +2,7 @@
 boilerplate.html
 website icon.ai
 node_modules
+*.icloud
 
 .DS_STORE
 node_modules
