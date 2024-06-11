@@ -22,7 +22,7 @@ function UnitsBadge({ units = 4 } : { units? : number }) {
 export function TopBadge({ nolink = false } : { nolink? : boolean }) {
     return (
         !nolink ? 
-        <a href="/#awards/#academic-achievements">
+        <a href="/#awards#academic-achievements">
             <Badge style={{ marginLeft: "0.3em" }} bg="warning">
                 Top Performer Award
             </Badge>
