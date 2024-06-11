@@ -10,8 +10,14 @@ import ResumeEntry from "../components/base/side-pages/ResumeEntry";
 import RowLayout from "../components/base/side-pages/RowLayout";
 import Timeline from "../components/base/timeline/Timeline";
 import TimelineEntry from "../components/base/timeline/TimelineEntry";
+import { useEffect } from "react";
+import { AnchorScroll } from "../utils/AnchorScroll";
 
 function PersonalMainBody({ screenWidth } : { screenWidth : number } ) {
+    
+    // fix React bug when accessing anchors in the page
+    useEffect(AnchorScroll, []);
+
     return (
         <article>
             <PageSection title="Personal &amp; Hobbies">

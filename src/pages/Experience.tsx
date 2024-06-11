@@ -9,10 +9,13 @@ import UniGradesTab, { ProjectBadge, SuBadge, TopBadge } from '../components/bas
 import JcGradesTab from '../components/base/side-pages/JcGradesTab';
 import HomePageButton from '../components/buttons/HomePageButton';
 import { useWindowParams } from '../hooks/useWindowParams';
+import { AnchorScroll } from '../utils/AnchorScroll';
+import { useEffect } from 'react';
 
 function ExperienceMainBody({ screenWidth } : {screenWidth : number}) {
 
     document.title = "About Me & Experience | Brendan Koh";
+    useEffect(AnchorScroll, []);
 
     return (
         <article>
