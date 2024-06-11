@@ -1,10 +1,13 @@
 import { Container } from 'react-bootstrap';
+import { AnchorScroll } from '../utils/AnchorScroll';
+import { useEffect } from 'react';
 
 export default function ErrorPage({ error, errorDesc } : { error : string, errorDesc : string }) {
     
     // <img src="crumpled-paper-texture.jpg" className="image-bg" />
 
     document.title = error + " :(";
+    useEffect(AnchorScroll, []);
     
     return (
         <div className="container-wrap">

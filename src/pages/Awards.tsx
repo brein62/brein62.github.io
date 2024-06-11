@@ -12,22 +12,12 @@ import TodoStudyLogo from '../components/base/logos/TodoStudyLogo';
 import LinkToAwardButton from '../components/buttons/LinkToAwardButton';
 import { faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
 import LinkButton from '../components/buttons/LinkButton';
+import { AnchorScroll } from '../utils/AnchorScroll';
 
 function AwardsMainBody({ screenWidth } : {screenWidth : number}) {
 
     // fix React bug when accessing anchors in the page
-    useEffect(() => {
-
-        // if anchor exists
-        if (document.location.hash) {
-
-            // go to anchor and scroll to anchor after 200ms
-            const aa = document.querySelector(document.location.hash);
-            setTimeout(()=> {
-                if (aa) aa.scrollIntoView({ behavior: "smooth", block: "start" })
-            }, 200);
-        }
-    }, []);
+    useEffect(AnchorScroll, []);
 
     return (
         <article>

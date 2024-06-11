@@ -12,22 +12,13 @@ import ProjectContainer from '../components/base/side-pages/ProjectContainer';
 import ProjectColumn from '../components/base/side-pages/ProjectColumn';
 import EventInfo from '../components/base/side-pages/EventInfo';
 import EventList from '../components/base/side-pages/EventList';
+import { AnchorScroll } from '../utils/AnchorScroll';
 
 function VolunteeringMainBody({ screenWidth } : {screenWidth : number}) {
 
+
     // fix React bug when accessing anchors in the page
-    useEffect(() => {
-
-        // if anchor exists
-        if (document.location.hash) {
-
-            // go to anchor and scroll to anchor after 200ms
-            const aa = document.querySelector(document.location.hash);
-            setTimeout(()=> {
-                if (aa) aa.scrollIntoView({ behavior: "smooth", block: "start" })
-            }, 200);
-        }
-    }, []);
+    useEffect(AnchorScroll, []);
 
     return (
         <article>
