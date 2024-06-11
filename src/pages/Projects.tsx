@@ -54,18 +54,10 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                             languages="HTML, CSS, JavaScript"
                             libraries="React Router, Bootstrap, Font Awesome icons"
                             frameworks="React"
+                            img="/projects/personal-portfolio.png"
                             url="https://brein62.github.io">
                             <p className="justify lastp">
                                 Yes, this very website itself! Initially starting off as a pure HTML/CSS/JavaScript web project in 2022, I remastered the entire website using React in 2024 to reduce redundant boilerplate code and allow for easier development and additions to the website.
-                            </p>
-                        </ProjectInfo>
-                        <ProjectInfo
-                            title="Online Budget Tracker"
-                            date="Jan 2020 &ndash; Feb 2021"
-                            languages="Google Apps Script (JavaScript)"
-                            img={ ["/projects/online-budget-tracker-1.png", "/projects/online-budget-tracker-2.png", "/projects/online-budget-tracker-3.png"] }>
-                            <p className="justify lastp">
-                                An expense tracker I maintained from Jan 2020 to Feb 2021 where I entered transactions onto a Google form and a summary of how much money I spent and have left is displayed on a Google Sheets spreadsheet. Although this project is customised for myself, I may produce templates (Google Forms and Google Sheets) to allow other people to use it in the future.
                             </p>
                         </ProjectInfo>
                     </ProjectColumn>
@@ -90,6 +82,15 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                             >
                             <p className="justify lastp">
                                 A very simple stopwatch application made in 1 day to experiment with vanilla JavaScript features and responsive web design.
+                            </p>
+                        </ProjectInfo>
+                        <ProjectInfo
+                            title="Online Budget Tracker"
+                            date="Jan 2020 &ndash; Feb 2021"
+                            languages="Google Apps Script (JavaScript)"
+                            img={ ["/projects/online-budget-tracker-1.png", "/projects/online-budget-tracker-2.png", "/projects/online-budget-tracker-3.png"] }>
+                            <p className="justify lastp">
+                                An expense tracker I maintained from Jan 2020 to Feb 2021 where I entered transactions onto a Google form and a summary of how much money I spent and have left is displayed on a Google Sheets spreadsheet. Although this project is customised for myself, I may produce templates (Google Forms and Google Sheets) to allow other people to use it in the future.
                             </p>
                         </ProjectInfo>
                     </ProjectColumn>
