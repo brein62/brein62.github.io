@@ -7,7 +7,9 @@ export default function EventInfo({ title, dates, children } : { title : string,
             <Card.Title>{ title }</Card.Title>
             <Card.Subtitle>{ dates }</Card.Subtitle>
             <Card.Text style={{ marginTop: "0.5em" }}>
-                { children }
+                <p className="justify">
+                    { children }
+                </p>
             </Card.Text>
         </Card.Body>
     );

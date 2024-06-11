@@ -4,7 +4,7 @@ export default function TodoStudyLogo({ green = true, link = false } : { green? 
         
         <span className={ green ? "todo-study-logo" : "todo-study-logo-nocolor" }>
             { link ?
-                <a className={ green ? "todo-study-logo" : "todo-study-logo-nocolor" } href="/projects#school-projects">{ "// TODO: Study" }</a> :
+                <a className={ green ? "todo-study-logo" : "todo-study-logo-nocolor" } href="/#projects#school-projects">{ "// TODO: Study" }</a> :
                 "// TODO: Study" }
         </span>
     )

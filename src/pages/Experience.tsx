@@ -114,7 +114,9 @@ function ExperienceMainBody({ screenWidth } : {screenWidth : number}) {
                         subtitle="Level 5"
                         dates="28 Apr 2018 onwards"
                         screenWidth={screenWidth}>
-                        The HSK tests language proficiency of Standard Chinese to foreign learners and overseas Chinese. When I did the HSK Level 5 test, it was the 2nd highest level of language proficiency attainable.
+                        <p className="justify">
+                            The HSK tests language proficiency of Standard Chinese to foreign learners and overseas Chinese. When I did the HSK Level 5 test, it was the 2nd highest level of language proficiency attainable.
+                        </p>
                     </ResumeEntry>
                 </ResumeList>
             </PageSection>

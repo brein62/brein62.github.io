@@ -34,14 +34,18 @@ function VolunteeringMainBody({ screenWidth } : {screenWidth : number}) {
                         dates="8 Jun 2019"
                         subtitle="Facilitator"
                         screenWidth={ screenWidth }>
-                        Held in NUS School of Computing, BuildingBloCS is an annual event aiming to spread the love of Computer Science to its participants through workshops and talks from industry partners. Participants were students from local secondary schools. I facilitated and led a group of 4 students to participate in the activities throughout the event.
+                        <p className="justify">
+                            Held in NUS School of Computing, BuildingBloCS is an annual event aiming to spread the love of Computer Science to its participants through workshops and talks from industry partners. Participants were students from local secondary schools. I facilitated and led a group of 4 students to participate in the activities throughout the event.
+                        </p>
                     </ResumeEntry>
                     <ResumeEntry
                         title="SoC FLAG Beneficiary Engagement Day 2022"
                         dates="8 &amp; 25 Jul 2022"
                         subtitle="Volunteer"
                         screenWidth={ screenWidth }>
-                        An event where volunteers from NUS SoC engage beneficiaries from MINDS Fernvale Gardens School through teaching simple programming through <a href="https://scratch.mit.edu">Scratch</a> (8 Jul) and a flower-making workshop (25 Jul). Part of SoC's FLAG initiative in 2022.
+                        <p className="justify">
+                            An event where volunteers from NUS SoC engage beneficiaries from MINDS Fernvale Gardens School through teaching simple programming through <a href="https://scratch.mit.edu">Scratch</a> (8 Jul) and a flower-making workshop (25 Jul). Part of SoC's FLAG initiative in 2022.
+                        </p>
                     </ResumeEntry>
                 </ResumeList>
             </PageSection>
