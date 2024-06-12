@@ -75,13 +75,13 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                         </ProjectInfo>
                         <ProjectInfo
                             title="Very Simple Timer"
-                            date="21 May 2021"
+                            date="21 May 2021, 12 Jun 2024"
                             languages="HTML/CSS/JavaScript"
                             url="https://brein62.github.io/very-simple-timer"
                             img={["/projects/very-simple-timer/light-mode.png", "/projects/very-simple-timer/dark-mode.png"]}
                             >
                             <p className="justify lastp">
-                                A very simple stopwatch application made in 1 day to experiment with vanilla JavaScript features and responsive web design.
+                                A very simple stopwatch application made in 1 day to experiment with vanilla JavaScript features and responsive web design. I updated the website on 12 Jun 2024 to allow mobile devices to use this timer and improved the UI slightly.
                             </p>
                         </ProjectInfo>
                         <ProjectInfo
