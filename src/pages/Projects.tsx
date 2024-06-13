@@ -60,6 +60,16 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                                 Yes, this very website itself! Initially starting off as a pure HTML/CSS/JavaScript web project in 2022, I remastered the entire website using React in 2024 to reduce redundant boilerplate code and allow for easier development and additions to the website.
                             </p>
                         </ProjectInfo>
+                        <ProjectInfo
+                            title="Single-Page Projects"
+                            date="13 Jun 2024 (main page)"
+                            languages="HTML, CSS (main page)"
+                            libraries="Bootstrap, Font Awesome icons (main page)"
+                            url="https://brein62.github.io/single-page-projects">
+                            <p className="justify lastp">
+                                A bunch of single-page web applications I developed over the years. Currently consists of 2 projects: <a href="https://brein62.github.io/single-page-projects/chartester/">chartester</a> and <a href="https://brein62.github.io/single-page-projects/lap-timer/">lap-timer</a>. These projects will be enhanced to include mobile functionality in the future.
+                            </p>
+                        </ProjectInfo>
                     </ProjectColumn>
                     <ProjectColumn second screenWidth={screenWidth}>
                         <ProjectInfo
