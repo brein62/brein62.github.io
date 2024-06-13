@@ -172,6 +172,11 @@ export default function UniGradesTab() {
                             </Tab.Pane>
                             <Tab.Pane eventKey="Y2S2">
                                 <ul>
+                                    <li>
+                                        <strong>
+                                            <a href="/#awards#academic-achievements">Dean's List, AY2023/2024 Semester 2</a>
+                                        </strong>
+                                    </li>
                                     <GradeEntry>
                                         <strong>CS2102 Database Systems: </strong>A
                                         <UnitsBadge />

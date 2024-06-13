@@ -28,6 +28,20 @@ function AwardsMainBody({ screenWidth } : {screenWidth : number}) {
             <MainPageDivider />
             <PageSection title="Academic Achievements">
                 <ResumeList>
+                    <ResumeEntry
+                        title="Dean's List"
+                        dates="11 Jun 2024"
+                        subtitle="AY2023/2024 Semester 2"
+                        screenWidth={screenWidth}>
+                        <p className="justify">
+                            I was the top 5&ndash;10% of the cohort during my Year 2 Sem 2 (<strong>AY2023/2024 Semester 2</strong>) and was placed on the <strong>Dean's List</strong> for my faculty during this semester for outstanding academic performance.
+                        </p>
+                        <p className="justify lastp">
+                            <LinkToAwardButton href="https://credentials.nus.edu.sg/abe0f404-8721-4fb2-ba76-10a5a4dfc31d">
+                                Dean's List Award
+                            </LinkToAwardButton>
+                        </p>
+                    </ResumeEntry>
                     <ResumeEntry 
                         title="Top Student Award"
                         dates="12 Jan 2024"
