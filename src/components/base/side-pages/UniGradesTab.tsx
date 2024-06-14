@@ -15,7 +15,7 @@ function CsCuBadge() {
 
 function UnitsBadge({ units = 4 } : { units? : number }) {
     return (
-        <Badge style={{ marginLeft: "0.3em" }} bg="primary">{units} units</Badge>
+        <Badge style={{ marginLeft: "0.3em" }} bg="primary">{units} unit{units !== 1 ? "s" : ""}</Badge>
     )
 }
 
@@ -134,6 +134,10 @@ export default function UniGradesTab() {
                                     <GradeEntry>
                                         <strong>IS1108 Digital Ethics and Data Privacy: </strong>A
                                         <UnitsBadge />
+                                    </GradeEntry>
+                                    <GradeEntry>
+                                        <strong>CS1010R Programming Methodology: </strong>A+
+                                        <UnitsBadge units={1} />
                                     </GradeEntry>
                                 </ul>
                             </Tab.Pane>
