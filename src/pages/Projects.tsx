@@ -61,6 +61,18 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                             </p>
                         </ProjectInfo>
                         <ProjectInfo
+                            title="Lights Out"
+                            date="2022 &ndash; Present"
+                            languages="HTML/CSS/JavaScript"
+                            libraries="Bootstrap"
+                            frameworks="React"
+                            url="https://brein62.github.io/lights-out"
+                            >
+                            <p className="justify lastp">
+                                A Lights Out simulator puzzle game. In this game, you move by clicking on a tile in the grid. This causes the tile clicked and the 4 surrounding tiles to toggle colour (dark to light, light to dark). You solve the puzzle by making all the dark tiles light in colour.
+                            </p>
+                        </ProjectInfo>
+                        <ProjectInfo
                             title="Single-Page Projects"
                             date="13 Jun 2024 (main page)"
                             languages="HTML, CSS (main page)"
@@ -141,6 +153,16 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                             </p>
                             <p className="justify">
                                 This project is one of many software development projects developed for the module <em>CS2103T Software Engineering</em>, and is based on the AddressBook-Level3 project created by the <a rel="noopener noreferrer" target="_blank" href="https://se-education.org/">SE-EDU initiative</a>.
+                            </p>
+                        </ProjectInfo>
+                        <ProjectInfo
+                            title="Migrate AB3 to Java 17"
+                            date="CP3108A project (Jun 2024 &ndash; Present)"
+                            languages="Java"
+                            libraries="JavaFX, Jackson, JUnit5"
+                            url={[{"name": "Repository", "url": "https://github.com/brein62/AB3-J17"}]}>
+                            <p className="justify">
+                                The AddressBook-Level3 project created by the <a rel="noopener noreferrer" target="_blank" href="https://se-education.org/">SE-EDU initiative</a> and used for <em>CS2103T Software Engineering</em> currently runs on Java 11. This project aims to upgrade the components of the project to Java 17 while trying to make the migration process as bug and error-free as possible (on my M1 Mac, the original project I used in CS2103T required some effort on my end due to issues running the JavaFX library and requiring a specific JDK for my Mac to compile and build the project).
                             </p>
                         </ProjectInfo>
                     </ProjectColumn>
