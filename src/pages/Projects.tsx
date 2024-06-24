@@ -164,6 +164,9 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                             <p className="justify">
                                 The AddressBook-Level3 project created by the <a rel="noopener noreferrer" target="_blank" href="https://se-education.org/">SE-EDU initiative</a> and used for <em>CS2103T Software Engineering</em> currently runs on Java 11. This project aims to upgrade the components of the project to Java 17 while trying to make the migration process as bug and error-free as possible (on my M1 Mac, the original project I used in CS2103T required some effort on my end due to issues running the JavaFX library and requiring a specific JDK for my Mac to compile and build the project).
                             </p>
+                            <p className="justify">
+                                This project helped me learn a lot about dependency management in Java/Gradle and the difficulty in running cross-platform GUI applications since different operating systems have their own libraries and environments.
+                            </p>
                         </ProjectInfo>
                     </ProjectColumn>
                 </ProjectContainer>
