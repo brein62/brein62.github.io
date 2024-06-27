@@ -127,10 +127,12 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                             title={ <TodoStudyLogo /> }
                             date="Orbital project (May 2023 &ndash; Aug 2023)"
                             languages="HTML, CSS, JavaScript, Python, SQL"
-                            libraries="React Router, Material UI"
+                            libraries="React Router, Material UI, Dayjs, Draft.js, react-draft-wysiwyg, html-prettify, JSZip, FileSaver.js, Lodash"
                             frameworks="React"
-                            apis="Telegram API, Google OAuth integration, Canvas API, Supabase"
-                            url="https://todo-study-orbital.vercel.app"
+                            apis="Telegram API, Google OAuth integration, Canvas API, Supabase, Quotable API"
+                            url={[{"name": "App", "url": "https://todo-study-orbital.vercel.app"},
+                                  {"name": "Repository", "url": "https://github.com/orbital-2023-team-5450/todo-study"}
+                                 ]}
                             img="/projects/todo-study.png">
                             <p className="justify">
                                 <TodoStudyLogo /> is a web application that allows students to study effectively by integrating multiple study features into one platform. It consists of several features, including a <strong>study timer</strong>, <strong>to-do list</strong>, <strong>note-taking</strong>, and <strong>Canvas LMS downloader</strong>. The application also includes a simple <strong>Telegram bot</strong> programmed in Python for reminders and easy sharing of notes within the app.
