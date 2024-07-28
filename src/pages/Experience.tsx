@@ -74,6 +74,15 @@ function ExperienceMainBody({ screenWidth } : {screenWidth : number}) {
             <MainPageDivider />
             <PageSection title="Work &amp; Internship Experience">
                 <ResumeList>
+                    <ResumeEntry
+                        title="Oceanus Group Limited"
+                        subtitle="Software Development Intern, Oceanus Innoventure"
+                        dates="Jul 2024 &ndash; Present"
+                        screenWidth={screenWidth}
+                    >
+                        <p className="justify">
+                        </p>
+                    </ResumeEntry>
                     <ResumeEntry 
                         title="Bitopia Technology Pte Ltd"
                         subtitle="Part-Time Software Developer"
@@ -100,9 +109,10 @@ function ExperienceMainBody({ screenWidth } : {screenWidth : number}) {
             <PageSection title="Skills">
                 <ul>
                     <li><strong>Languages: </strong>English (fluent), Mandarin Chinese (conversational)</li>
-                    <li><strong>Software proficiency: </strong>Microsoft Office suite (Word, Excel, PowerPoint), Adobe Photoshop, Adobe Illustrator, Canva, video editing software</li>
+                    <li><strong>Software proficiency: </strong>Microsoft Office suite (Word, Excel, PowerPoint), Adobe Photoshop, Adobe Illustrator, Canva, Figma, video editing software</li>
                     <li><strong>Programming languages: </strong>Python, Java, HTML/CSS/JavaScript, C++, C#, C, SQL</li>
                     <li><strong>Web development frameworks/libraries: </strong>React, Vue, Bootstrap, JQuery, Material UI</li>
+                    <li><strong>Backend frameworks: </strong>Django, Spring Boot</li>
                     <li><strong>Machine learning frameworks: </strong>Scikit-learn, PyTorch</li>
                     <li><strong>Other languages: </strong>LaTeX typesetting, R, Matlab</li>
                 </ul>

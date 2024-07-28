@@ -72,6 +72,9 @@ function VolunteeringMainBody({ screenWidth } : {screenWidth : number}) {
                         <p className="justify">
                             A regular volunteering programme under <strong>Rotaract Club of NUS</strong>, Project Embrace involves volunteers going in pairs to engage and interact with children/youths with intellectual disabilities (e.g. autism) by guiding them with homework and activities in their own homes. Sessions are held weekly and I have taught 3 different youths so far throughout this program.
                         </p>
+                        <p className="justify">
+                            From Jul 2024 to Aug 2024, I came up with several activities to be played by the children/youths throughout the year as part of their <strong>Programmes Team</strong> for Academic Year 2024/2025.
+                        </p>
                     </ResumeEntry>
                     <ResumeEntry
                         title="Reach Out"

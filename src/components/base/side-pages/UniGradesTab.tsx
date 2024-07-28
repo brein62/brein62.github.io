@@ -7,6 +7,13 @@ export function SuBadge() {
     );
 }
 
+export function TbcBadge() {
+    return (
+        <Badge style={{ marginLeft: "0.3em" }} bg="secondary">To be confirmed</Badge>
+    );
+}
+
+
 function CsCuBadge() {
     return (
         <Badge style={{ marginLeft: "0.3em" }} bg="success">Pass/fail module (passed)</Badge>
@@ -60,7 +67,7 @@ function GradeEntry({ children } : { children : React.ReactNode }) {
 export default function UniGradesTab() {
     return (
         <div style={{ border: "1px dashed", borderRadius: "10px", padding: "0.5em" }}>
-            <Tab.Container id="left-tabs-example" defaultActiveKey="Y2S2">
+            <Tab.Container id="left-tabs-example" defaultActiveKey="Y3S1">
                 <Row>
                     <Col sm={3}>
                         <Nav variant="pills" className="flex-column">
@@ -75,6 +82,9 @@ export default function UniGradesTab() {
                             </Nav.Item>
                             <Nav.Item>
                                 <Nav.Link eventKey="Y2S2">Y2S2</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link eventKey="Y3S1">Y3S1</Nav.Link>
                             </Nav.Item>
                         </Nav>
                     </Col>
@@ -210,6 +220,44 @@ export default function UniGradesTab() {
                                         <strong>CFG1003 Financial Wellbeing - Introduction: </strong>CS
                                         <UnitsBadge units={0} />
                                         <CsCuBadge />
+                                    </GradeEntry>
+                                </ul>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="Y3S1">
+                                <ul>
+                                    <GradeEntry>
+                                        <strong>CS3219 Software Engineering Principles and Patterns</strong>
+                                        <UnitsBadge />
+                                        <ProjectBadge name="TBC" href="/#projects#school-projects" />
+                                    </GradeEntry>
+                                    <GradeEntry>
+                                        <strong>CS3230 Design and Analysis of Algorithms</strong>
+                                        <UnitsBadge />
+                                    </GradeEntry>
+                                    <GradeEntry>
+                                        <strong>CS2106 Introduction to Operating Systems</strong>
+                                        <UnitsBadge />
+                                    </GradeEntry>
+                                    <GradeEntry>
+                                        <strong>CS2105 Introduction to Computer Networks</strong>A+
+                                        <UnitsBadge />
+                                    </GradeEntry>
+                                    <GradeEntry>
+                                        <strong>EC3101 Microeconomic Analysis II</strong>
+                                        <UnitsBadge />
+                                        <TbcBadge />
+                                    </GradeEntry>
+                                    <GradeEntry>
+                                        <strong>CP3108A Independent Work</strong>
+                                        <UnitsBadge units={2} />
+                                        <ProjectBadge name="Migrate AB3 to Java 17" href="/#projects#school-projects" />
+                                        <TbcBadge />
+                                        {/* <CsCuBadge /> */}
+                                    </GradeEntry>
+                                    <GradeEntry>
+                                        <strong>CFG1004 Financial Wellbeing - Art and Science of Investing</strong>
+                                        <UnitsBadge units={2} />
+                                        {/* <CsCuBadge /> */}
                                     </GradeEntry>
                                 </ul>
                             </Tab.Pane>
