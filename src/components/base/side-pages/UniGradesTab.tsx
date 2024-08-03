@@ -245,7 +245,6 @@ export default function UniGradesTab() {
                                     <GradeEntry>
                                         <strong>EC3101 Microeconomic Analysis II</strong>
                                         <UnitsBadge />
-                                        <TbcBadge />
                                     </GradeEntry>
                                     <GradeEntry>
                                         <strong>CP3108A Independent Work</strong>
