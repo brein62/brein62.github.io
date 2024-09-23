@@ -166,7 +166,7 @@ export default function Personal() {
 
     const screenWidth = useWindowParams(true, false)[0];
 
-    document.title = "Projects | Brendan Koh";
+    document.title = "Personal | Brendan Koh";
 
     return (
         <div className="container-wrap">

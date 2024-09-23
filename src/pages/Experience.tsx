@@ -152,6 +152,8 @@ export default function Experience() {
 
     const screenWidth = useWindowParams(true, false)[0];
 
+    document.title = "Experience | Brendan Koh";
+
     return (
         <div className="container-wrap">
             <Container className="container container-inner container-sm">
