@@ -1,6 +1,6 @@
 # brein62.github.io
 
-Hi! I'm Brendan Koh, also known as `brein62`, an upcoming Year 3 undergraduate studying Computer Science. I made this website to allow myself to gain more firsthand experience in web development while also allowing me to show what I've done to the world.
+Hi! I'm Brendan Koh, also known as `brein62`, a Year 3 undergraduate studying Computer Science. I made this website to allow myself to gain more firsthand experience in web development while also allowing me to show what I've done to the world.
 
 Check out my portfolio here: https://brein62.github.io
 

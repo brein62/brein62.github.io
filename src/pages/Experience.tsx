@@ -21,7 +21,7 @@ function ExperienceMainBody({ screenWidth } : {screenWidth : number}) {
         <article>
             <PageSection title="About Me">
                 <p className="big justify lastp">
-                    I am a Year 2 student currently pursuing a Bachelor of Computing (Computer Science) at the School of Computing, National University of Singapore. I have had years of experience programming as a hobby, and I pursued Computing as a subject during my Junior College days. In my free time, I not only code, but also solve Rubik's cubes, casually run, gym, as well as play puzzle or rhythm games. I also enjoy community service and volunteering and am always willing to help my peers and those in need. I am always welcome to learn new hobbies or help others with my area of expertise!
+                    I am a Year 3 student currently pursuing a Bachelor of Computing (Computer Science) at the School of Computing, National University of Singapore. I have had years of experience programming as a hobby, and I pursued Computing as a subject during my Junior College days. In my free time, I not only code, but also solve Rubik's cubes, casually run, gym, as well as play puzzle or rhythm games. I also enjoy community service and volunteering and am always willing to help my peers and those in need. I am always welcome to learn new hobbies or help others with my area of expertise!
                 </p>
             </PageSection>
             <MainPageDivider />
