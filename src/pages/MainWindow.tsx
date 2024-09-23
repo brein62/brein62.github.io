@@ -3,6 +3,11 @@ import Footer from '../primary/Footer';
 import MainBody from '../primary/MainBody';
 import { Container } from 'react-bootstrap';
 
+/**
+ * Returns the main page (/).
+ * 
+ * @returns The component representing the main page.
+ */
 export default function MainWindow() {
     //<img src="crumpled-paper-texture.jpg" className="image-bg" />
 

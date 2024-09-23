@@ -14,6 +14,13 @@ import { faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
 import LinkButton from '../components/buttons/LinkButton';
 import { AnchorScroll } from '../utils/AnchorScroll';
 
+/**
+ * Returns the main body of the Awards page, given the following props:
+ * 
+ * - screenWidth: The screen width of the main body of the Awards page to be displayed.
+ * 
+ * @returns The component containing the main body of the Awards page.
+ */
 function AwardsMainBody({ screenWidth } : {screenWidth : number}) {
 
     // fix React bug when accessing anchors in the page
@@ -198,6 +205,11 @@ function AwardsMainBody({ screenWidth } : {screenWidth : number}) {
     );
 }
 
+/**
+ * Returns the Awards page (/awards).
+ * 
+ * @returns The component representing the Awards page.
+ */
 export default function Awards() {
 
     const screenWidth = useWindowParams(true, false)[0];

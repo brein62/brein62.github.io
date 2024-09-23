@@ -1,6 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
+/**
+ * Returns the component to be displayed as the footer in all pages.
+ * @returns The footer component to be displayed in all pages.
+ */
 export default function Footer() {
     return (
         <footer>

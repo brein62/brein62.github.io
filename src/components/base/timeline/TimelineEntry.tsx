@@ -2,6 +2,14 @@ import { Row, Col } from "react-bootstrap";
 import TimelineComponent from "./TimelineComponent";
 import React, { useEffect, useRef, useState } from "react";
 
+/**
+ * A specific timeline entry within a Timeline object. Requires the following props:
+ * 
+ * - years: The year/time the timeline entry refers to, displayed on the left side of the timeline.
+ * - children: The content of the timeline entry, displayed on the right side of the timeline.
+ * 
+ * @returns A component representing the timeline entry within a Timeline object.
+ */
 export default function TimelineEntry( { years, children } : { years : string, children : React.ReactNode }) {
 
     const content = useRef<HTMLDivElement>(null);

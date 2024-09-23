@@ -1,3 +1,10 @@
+/**
+ * Returns the timeline component as an SVG line with a circle in the middle. The height of the line
+ * can be configured using the `height` prop (which is set to 150 by default).
+ * 
+ * @returns The timeline component separating the year and the timeline events within a TimelineEntry,
+ * as an SVG object.
+ */
 export default function TimelineComponent({ height = 150 } : { height? : number }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" height={ height } width="20">

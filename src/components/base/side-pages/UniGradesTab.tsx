@@ -1,31 +1,62 @@
 import { Badge, Col, Nav, Row, Tab } from 'react-bootstrap';
 import TodoStudyLogo from '../logos/TodoStudyLogo';
 
+/**
+ * Returns a badge indicating S/U option has been exercised.
+ * 
+ * @returns A badge indicating S/U option has been exercised.
+ */
 export function SuBadge() {
     return (
         <Badge style={{ marginLeft: "0.3em" }} bg="secondary">S/U option exercised</Badge>
     );
 }
 
+/**
+ * Returns a badge indicating that there are details to be confirmed.
+ * 
+ * @returns A badge indicating that there are details to be confirmed.
+ */
 export function TbcBadge() {
     return (
         <Badge style={{ marginLeft: "0.3em" }} bg="secondary">To be confirmed</Badge>
     );
 }
 
-
+/**
+ * Returns a badge indicating that the module is pass/fail (CS/CU).
+ * 
+ * @returns A badge indicating that the module is pass/fail (CS/CU).
+ */
 function CsCuBadge() {
     return (
         <Badge style={{ marginLeft: "0.3em" }} bg="success">Pass/fail module (passed)</Badge>
     );
 }
 
+
+/**
+ * Returns a badge indicating the number of units in the module. May include the prop:
+ * 
+ * - units: The number of units in the module (default 4).
+ * 
+ * @returns A badge indicating indicating the number of units in the module.
+ */
 function UnitsBadge({ units = 4 } : { units? : number }) {
     return (
         <Badge style={{ marginLeft: "0.3em" }} bg="primary">{units} unit{units !== 1 ? "s" : ""}</Badge>
     )
 }
 
+/**
+ * Returns a badge indicating top performance in the module. May have the following props:
+ * 
+ * - nolink: Whether to link to the Awards page under Academic Achievements (if false). Defaults
+ *   to false.
+ * 
+ * @returns A badge indicating top performance in the module. May link to the Awards page under
+ * Academic Achievements.
+ */
 export function TopBadge({ nolink = false } : { nolink? : boolean }) {
     return (
         !nolink ? 
@@ -41,6 +72,16 @@ export function TopBadge({ nolink = false } : { nolink? : boolean }) {
     )
 }
 
+/**
+ * Returns a badge indicating the project made in the module. May have the following props:
+ * 
+ * - nolink: Whether to link to the Awards page under Academic Achievements (if false). Defaults
+ *   to false.
+ * - name (required): The name of the project. Can be a string or React node (for logos).
+ * - href (required): The link to the project (typically in the Projects page).
+ * 
+ * @returns A badge indicating the project made in the module. May link to the project in the Projects page.
+ */
 export function ProjectBadge({ nolink = false, name, href } : { nolink? : boolean, name : React.ReactNode, href : string }) {
     return (
         !nolink ? 
@@ -56,6 +97,21 @@ export function ProjectBadge({ nolink = false, name, href } : { nolink? : boolea
     )
 }
 
+/**
+ * A module entry within each UniGradesTab pane. Represents a module and their grades.
+ * Requires the following prop:
+ * 
+ * - children: The content of the module/grade entry with the UniGradesTab pane.
+ * 
+ * Example usage:
+ * ```
+ * <GradeEntry>
+ *     <strong>MA2001 Linear Algebra I: </strong>A+
+ *     <UnitsBadge />
+ * </GradeEntry>
+ * ```
+ * @returns The component representing a module within a UniGradesTab pane.
+ */
 function GradeEntry({ children } : { children : React.ReactNode }) {
     return (
         <li>
@@ -64,6 +120,11 @@ function GradeEntry({ children } : { children : React.ReactNode }) {
     )
 }
 
+/**
+ * Returns the tab interface for university grades in the Experience page.
+ * 
+ * @returns A component containing a tab interface for university grades in the Experience page.
+ */
 export default function UniGradesTab() {
     return (
         <div style={{ border: "1px dashed", borderRadius: "10px", padding: "0.5em" }}>

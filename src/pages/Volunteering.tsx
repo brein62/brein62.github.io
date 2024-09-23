@@ -14,6 +14,13 @@ import EventInfo from '../components/base/side-pages/EventInfo';
 import EventList from '../components/base/side-pages/EventList';
 import { AnchorScroll } from '../utils/AnchorScroll';
 
+/**
+ * Returns the main body of the Volunteering page, given the following props:
+ * 
+ * - screenWidth: The screen width of the main body of the Volunteering page to be displayed.
+ * 
+ * @returns The component containing the main body of the Volunteering page.
+ */
 function VolunteeringMainBody({ screenWidth } : {screenWidth : number}) {
 
 
@@ -148,6 +155,11 @@ function VolunteeringMainBody({ screenWidth } : {screenWidth : number}) {
     );
 }
 
+/**
+ * Returns the Volunteering page (/volunteering).
+ * 
+ * @returns The component representing the Volunteering page.
+ */
 export default function Volunteering() {
 
     const screenWidth = useWindowParams(true, false)[0];

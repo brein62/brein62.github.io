@@ -14,6 +14,13 @@ import LinkButton from "../components/buttons/LinkButton";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { AnchorScroll } from "../utils/AnchorScroll";
 
+/**
+ * Returns the main body of the Projects page, given the following props:
+ * 
+ * - screenWidth: The screen width of the main body of the Projects page to be displayed.
+ * 
+ * @returns The component containing the main body of the Projects page.
+ */
 function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
 
 
@@ -254,6 +261,11 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
     );
 }
 
+/**
+ * Returns the Projects page (/projects).
+ * 
+ * @returns The component representing the Projects page.
+ */
 export default function Projects() {
 
     const screenWidth = useWindowParams(true, false)[0];

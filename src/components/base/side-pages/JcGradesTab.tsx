@@ -1,5 +1,10 @@
 import { Col, Nav, Row, Tab } from 'react-bootstrap';
 
+/**
+ * Returns the tab interface for JC grades in the Experience page.
+ * 
+ * @returns A component containing a tab interface for JC grades in the Experience page.
+ */
 export default function JcGradesTab() {
     return (
         <div style={{ border: "1px dashed", borderRadius: "10px", padding: "0.5em" }}>

@@ -12,6 +12,13 @@ import { useWindowParams } from '../hooks/useWindowParams';
 import { AnchorScroll } from '../utils/AnchorScroll';
 import { useEffect } from 'react';
 
+/**
+ * Returns the main body of the Experience page, given the following props:
+ * 
+ * - screenWidth: The screen width of the main body of the Experience page to be displayed.
+ * 
+ * @returns The component containing the main body of the Experience page.
+ */
 function ExperienceMainBody({ screenWidth } : {screenWidth : number}) {
 
     document.title = "About Me & Experience | Brendan Koh";
@@ -136,6 +143,11 @@ function ExperienceMainBody({ screenWidth } : {screenWidth : number}) {
     );
 }
 
+/**
+ * Returns the Experience page (/experience).
+ * 
+ * @returns The component representing the Experience page.
+ */
 export default function Experience() {
 
     const screenWidth = useWindowParams(true, false)[0];

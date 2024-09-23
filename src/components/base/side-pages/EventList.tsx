@@ -2,6 +2,15 @@ import { useEffect, useState } from "react";
 import { Card, CardGroup, Container, Fade, Pagination, Stack } from "react-bootstrap"
 import ReactDOM from "react-dom";
 
+/**
+ * Displays a list of events as two cards displayed side-by-side with pagination (horizontally if screen width is large
+ * enough). Requires the following props:
+ * 
+ * - children: The individual EventInfo objects that are part of the EventList.
+ * - screenWidth: The width of the screen to render the event list in.
+ * 
+ * @returns A component representing a list of events as cards with pagination.
+ */
 export default function EventList({ children, screenWidth } : { children : React.ReactNode[], screenWidth : number }) {
 
     const [ active, setActive ] = useState(1);

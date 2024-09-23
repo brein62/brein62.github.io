@@ -13,6 +13,13 @@ import TimelineEntry from "../components/base/timeline/TimelineEntry";
 import { useEffect } from "react";
 import { AnchorScroll } from "../utils/AnchorScroll";
 
+/**
+ * Returns the main body of the Personal page, given the following props:
+ * 
+ * - screenWidth: The screen width of the main body of the Personal page to be displayed.
+ * 
+ * @returns The component containing the main body of the Personal page.
+ */
 function PersonalMainBody({ screenWidth } : { screenWidth : number } ) {
     
     // fix React bug when accessing anchors in the page
@@ -150,6 +157,11 @@ function PersonalMainBody({ screenWidth } : { screenWidth : number } ) {
     );
 }
 
+/**
+ * Returns the Personal page (/personal).
+ * 
+ * @returns The component representing the Personal page.
+ */
 export default function Personal() {
 
     const screenWidth = useWindowParams(true, false)[0];

@@ -1,5 +1,8 @@
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
+/**
+ * Sections in the main page.
+ */
 const sections = {
   "sections": [
     {

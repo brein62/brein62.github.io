@@ -3,6 +3,10 @@ import { useWindowParams } from '../hooks/useWindowParams';
 import sections from '../data/main-page/sections';
 import MainPageDivider from '../components/base/main-page/MainPageDivider';
 
+/**
+ * Returns the component to be displayed as the body of the main page (pages/MainWindow.tsx).
+ * @returns The body of the main page, as in pages/MainWindow.tsx.
+ */
 export default function MainBody() {
 
     const screenWidth = useWindowParams(true, false)[0];
