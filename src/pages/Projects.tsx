@@ -141,6 +141,24 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                                 This project was done as part of the NUS Orbital programme during my Year 1 summer break (summer 2023) with my friend. We managed to achieve an <a href="/#awards#academic-achievements">Apollo 11 (advanced) achievement level</a> for the project.
                             </p>
                         </ProjectInfo>
+                        <ProjectInfo
+                            title="PeerPrep"
+                            date="CS3219 project (Sep 2024 &ndash; present)"
+                            languages="HTML, CSS, JavaScript, TypeScript"
+                            libraries="React Router, Tailwind, shadcn, MongoDB, Mongoose"
+                            frameworks="React, Express.js"
+                            url="https://github.com/CS3219-AY2425S1/cs3219-ay2425s1-project-g36"
+                        >
+                            <p className="justify">
+                                <strong>PeerPrep</strong> is a technical interview preparation platform and peer matching system where students are able to be matched and work together in pairs to solve technical interview problems. This application is currently under development.
+                            </p>
+                            <p className="justify">
+                                PeerPrep uses a <em>microservices</em> architecture, which involves multiple different services being implemented and deployed separately, with a frontend that bridges the multiple microservices together.
+                            </p>
+                            <p className="justify">
+                                This project is one of many software development projects developed for the module <em>CS3219 Software Engineering Principles and Patterns</em>.
+                            </p>
+                        </ProjectInfo>
                     </ProjectColumn>
                     <ProjectColumn second screenWidth={ screenWidth }>
                         <ProjectInfo
@@ -160,14 +178,19 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                         <ProjectInfo
                             title="Migrate AB3 to Java 17"
                             date="CP3108A project (Jun 2024 &ndash; Present)"
-                            languages="Java"
+                            languages="Java, Markdown (guides)"
                             libraries="JavaFX, Jackson, JUnit5"
-                            url={[{"name": "Repository", "url": "https://github.com/brein62/AB3-J17"}]}>
+                            url={[{"name": "Repository", "url": "https://github.com/brein62/AB3-J17"},
+                                {"name": "Other contributions", "url": "https://github.com/se-edu/guides"}
+                            ]}>
                             <p className="justify">
-                                The AddressBook-Level3 project created by the <a rel="noopener noreferrer" target="_blank" href="https://se-education.org/">SE-EDU initiative</a> and used for <em>CS2103T Software Engineering</em> currently runs on Java 11. This project aims to upgrade the components of the project to Java 17 while trying to make the migration process as bug and error-free as possible (on my M1 Mac, the original project I used in CS2103T required some effort on my end due to issues running the JavaFX library and requiring a specific JDK for my Mac to compile and build the project).
+                                The AddressBook-Level3 projects created by the <a rel="noopener noreferrer" target="_blank" href="https://se-education.org/">SE-EDU initiative</a> and used for <em>CS2103T Software Engineering</em> ran on Java 11 during the semesters before May 2024. This project aimed to upgrade the components of the project to Java 17 while trying to make the migration process as bug and error-free as possible, due to compatibility issues faced with Mac computers when running JavaFX, a vital GUI library in the application. Through the efforts of myself and other student contributors over the summer, CS2103T is currently using Java 17 from the semester starting Aug 2024 onwards.
                             </p>
                             <p className="justify">
                                 This project helped me learn a lot about dependency management in Java/Gradle and the difficulty in running cross-platform GUI applications since different operating systems have their own libraries and environments.
+                            </p>
+                            <p className="justify">
+                                In addition, I also contributed to several <a rel="noopener noreferrer" target="_blank" href="https://github.com/se-edu/guides">guides</a> under the <a rel="noopener noreferrer" target="_blank" href="https://se-education.org/">SE-EDU initiative</a>, such as a proposed addition to their Visual Studio Code guide to add Checkstyle detection to Java projects using the <a rel="noopener noreferrer" target="_blank" href="https://marketplace.visualstudio.com/items?itemName=shengchen.vscode-checkstyle">Checkstyle for Java</a> plugin.
                             </p>
                         </ProjectInfo>
                     </ProjectColumn>
