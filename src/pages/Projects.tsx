@@ -150,17 +150,17 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                         </ProjectInfo>
                         <ProjectInfo
                             title="PeerPrep"
-                            date="CS3219 project (Sep 2024 &ndash; present)"
+                            date="CS3219 project (Sep 2024 &ndash; Nov 2024)"
                             languages="HTML, CSS, JavaScript, TypeScript"
-                            libraries="React Router, Tailwind, shadcn, MongoDB, Mongoose"
+                            libraries="React Router, Tailwind, shadcn, MongoDB, Mongoose, Kafka, WebSocket"
                             frameworks="React, Express.js"
                             url="https://github.com/CS3219-AY2425S1/cs3219-ay2425s1-project-g36"
                         >
                             <p className="justify">
-                                <strong>PeerPrep</strong> is a technical interview preparation platform and peer matching system where students are able to be matched and work together in pairs to solve technical interview problems. This application is currently under development.
+                                <strong>PeerPrep</strong> is a technical interview preparation platform and peer matching system where students are able to be matched and work together in pairs to solve technical interview problems.
                             </p>
                             <p className="justify">
-                                PeerPrep uses a <em>microservices</em> architecture, which involves multiple different services being implemented and deployed separately, with a frontend that bridges the multiple microservices together.
+                                PeerPrep uses a <em>microservices</em> architecture, which involves multiple different services being implemented and deployed separately, with a frontend that bridges the multiple microservices together. It makes use of various asynchronous communication mechanisms, such as the use of the <strong>Kafka event broker</strong> to help match two users and the use of <strong>WebSocket</strong> to handle the collaboration environment between two users.
                             </p>
                             <p className="justify">
                                 This project is one of many software development projects developed for the module <em>CS3219 Software Engineering Principles and Patterns</em>.
@@ -184,7 +184,7 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                         </ProjectInfo>
                         <ProjectInfo
                             title="Migrate AB3 to Java 17"
-                            date="CP3108A project (Jun 2024 &ndash; Present)"
+                            date="CP3108A project (Jun 2024 &ndash; Sep 2024)"
                             languages="Java, Markdown (guides)"
                             libraries="JavaFX, Jackson, JUnit5"
                             url={[{"name": "Repository", "url": "https://github.com/brein62/AB3-J17"},

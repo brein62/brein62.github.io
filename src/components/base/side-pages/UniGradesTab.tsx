@@ -4,11 +4,13 @@ import TodoStudyLogo from '../logos/TodoStudyLogo';
 /**
  * Returns a badge indicating S/U option has been exercised.
  * 
+ * - nomargin: Whether the badge should have a left margin (if false). Defaults to false.
+ * 
  * @returns A badge indicating S/U option has been exercised.
  */
-export function SuBadge() {
+export function SuBadge({ nomargin = false } : { nomargin? : boolean }) {
     return (
-        <Badge style={{ marginLeft: "0.3em" }} bg="secondary">S/U option exercised</Badge>
+        <Badge style={!nomargin ? { marginLeft: "0.3em" } : {}} bg="secondary">S/U option exercised</Badge>
     );
 }
 
@@ -53,20 +55,21 @@ function UnitsBadge({ units = 4 } : { units? : number }) {
  * 
  * - nolink: Whether to link to the Awards page under Academic Achievements (if false). Defaults
  *   to false.
+ * - nomargin: Whether the badge should have a left margin (if false). Defaults to false.
  * 
  * @returns A badge indicating top performance in the module. May link to the Awards page under
  * Academic Achievements.
  */
-export function TopBadge({ nolink = false } : { nolink? : boolean }) {
+export function TopBadge({ nolink = false, nomargin = false } : { nolink? : boolean, nomargin? : boolean }) {
     return (
         !nolink ? 
         <a href="/#awards#academic-achievements">
-            <Badge style={{ marginLeft: "0.3em" }} bg="warning">
+            <Badge style={!nomargin ? { marginLeft: "0.3em" } : {}} bg="warning">
                 Top Performer Award
             </Badge>
         </a>
         :
-        <Badge style={{ marginLeft: "0.3em" }} bg="warning">
+        <Badge style={!nomargin ? { marginLeft: "0.3em" } : {}} bg="warning">
             Top Performer Award
         </Badge>
     )
@@ -77,21 +80,22 @@ export function TopBadge({ nolink = false } : { nolink? : boolean }) {
  * 
  * - nolink: Whether to link to the Awards page under Academic Achievements (if false). Defaults
  *   to false.
+ * - nomargin: Whether the badge should have a left margin (if false). Defaults to false.
  * - name (required): The name of the project. Can be a string or React node (for logos).
  * - href (required): The link to the project (typically in the Projects page).
  * 
  * @returns A badge indicating the project made in the module. May link to the project in the Projects page.
  */
-export function ProjectBadge({ nolink = false, name, href } : { nolink? : boolean, name : React.ReactNode, href : string }) {
+export function ProjectBadge({ nolink = false, nomargin = false, name, href } : { nolink? : boolean, nomargin? : boolean, name : React.ReactNode, href : string }) {
     return (
         !nolink ? 
             <a href={ href }>
-                <Badge style={{ marginLeft: "0.3em" }} bg="danger">
+                <Badge style={!nomargin ? { marginLeft: "0.3em" } : {}} bg="danger">
                     { name ? <>Project ({ name })</> : <>Project</> }
                 </Badge>
             </a>
         : 
-        <Badge style={{ marginLeft: "0.3em" }} bg="danger">
+        <Badge style={!nomargin ? { marginLeft: "0.3em" } : {}} bg="danger">
             { name ? <>Project ({ name })</> : <>Project</> }
         </Badge>
     )
@@ -146,6 +150,9 @@ export default function UniGradesTab() {
                             </Nav.Item>
                             <Nav.Item>
                                 <Nav.Link eventKey="Y3S1">Y3S1</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link eventKey="Y3S2">Y3S2</Nav.Link>
                             </Nav.Item>
                         </Nav>
                     </Col>
@@ -289,7 +296,7 @@ export default function UniGradesTab() {
                                     <GradeEntry>
                                         <strong>CS3219 Software Engineering Principles and Patterns</strong>
                                         <UnitsBadge />
-                                        <ProjectBadge name="TBC" href="/#projects#school-projects" />
+                                        <ProjectBadge name="PeerPrep" href="/#projects#school-projects" />
                                     </GradeEntry>
                                     <GradeEntry>
                                         <strong>CS3230 Design and Analysis of Algorithms</strong>
@@ -300,7 +307,7 @@ export default function UniGradesTab() {
                                         <UnitsBadge />
                                     </GradeEntry>
                                     <GradeEntry>
-                                        <strong>CS2105 Introduction to Computer Networks</strong>A+
+                                        <strong>CS2105 Introduction to Computer Networks</strong>
                                         <UnitsBadge />
                                     </GradeEntry>
                                     <GradeEntry>
@@ -311,7 +318,6 @@ export default function UniGradesTab() {
                                         <strong>CP3108A Independent Work</strong>
                                         <UnitsBadge units={2} />
                                         <ProjectBadge name="Migrate AB3 to Java 17" href="/#projects#school-projects" />
-                                        <TbcBadge />
                                         {/* <CsCuBadge /> */}
                                     </GradeEntry>
                                     <GradeEntry>
@@ -320,6 +326,9 @@ export default function UniGradesTab() {
                                         {/* <CsCuBadge /> */}
                                     </GradeEntry>
                                 </ul>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="Y3S2">
+                                <em>Semester has not started yet!</em>
                             </Tab.Pane>
                         </Tab.Content>
                     </Col>

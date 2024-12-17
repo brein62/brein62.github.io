@@ -48,9 +48,9 @@ function ExperienceMainBody({ screenWidth } : {screenWidth : number}) {
                             <Accordion.Item eventKey="coursework">
                                 <Accordion.Header>Coursework done and grades:</Accordion.Header>
                                 <Accordion.Body>
-                                    <p className="justify"><strong>Note: </strong>For modules marked<SuBadge />, I have converted them to pass/fail such that these modules do not count towards my GPA. NUS allows 40 units (8 modules) to be converted to pass/fail over 4 years.</p>
+                                    <p className="justify"><strong>Note: </strong>For modules marked <SuBadge nomargin />, I have converted them to pass/fail such that these modules do not count towards my GPA. NUS allows 40 units (8 modules) to be converted to pass/fail over 4 years.</p>
                                     <p className="justify">
-                                        For more information about the<TopBadge nolink /> and<ProjectBadge nolink name="" href="#" /> badges, click on the respective badge to find out about the projects and awards I have received for these modules!
+                                        For more information about the <TopBadge nomargin nolink /> and <ProjectBadge nomargin nolink name="" href="#" /> badges, click on the respective badge to find out about the projects and awards I have received for these modules!
                                     </p>
                                     <UniGradesTab />
                                 </Accordion.Body>
@@ -84,10 +84,11 @@ function ExperienceMainBody({ screenWidth } : {screenWidth : number}) {
                     <ResumeEntry
                         title="Oceanus Group Limited"
                         subtitle="Software Development Intern, Oceanus Innoventure"
-                        dates="Jul 2024 &ndash; Present"
+                        dates="Jul 2024 &ndash; Aug 2024"
                         screenWidth={screenWidth}
                     >
                         <p className="justify">
+                            During this internship, I planned, designed and developed a full-stack AI-powered web application prototype using the React and Django frameworks, as well as the OpenAI API, from the ground up that is used by traders within the company. This helped me to acquire considerable expertise in full-stack application development, particularly in generative AI-powered applications and prompt engineering using OpenAI's API, over the span of only 6 weeks. These vital web development skills have proved useful in subsequent projects, such as <a href="#projects#school-projects">PeerPrep</a>.
                         </p>
                     </ResumeEntry>
                     <ResumeEntry 
@@ -97,7 +98,7 @@ function ExperienceMainBody({ screenWidth } : {screenWidth : number}) {
                         screenWidth={screenWidth}
                     >
                         <p className="justify">
-                            A full-stack web development role I did during my Year 2 Semester 1 in NUS, using Vue/Thymeleaf frontend and Java Spring Boot backend. I worked on several projects, including an IoT portal project and an integrated valuation management system (IVMS), where I created several essential frontend components of the projects (including implementing algorithms for frontend validation of form fields) and had experience in creating backend classes in Spring Boot using the Model-View-Controller (MVC) framework.
+                            A full-stack web development role I did during my Year 2 Semester 1 in NUS, using Vue/Thymeleaf frontend and Java Spring Boot backend. I worked on several projects, including an IoT portal project and an integrated valuation management system (IVMS), where I created several essential frontend components of the projects (including implementing algorithms for frontend validation of form fields) and had experience in creating backend classes in Spring Boot using the Model-View-Controller (MVC) pattern.
                         </p>
                     </ResumeEntry>
                     <ResumeEntry 
