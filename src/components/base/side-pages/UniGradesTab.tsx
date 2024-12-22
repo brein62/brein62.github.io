@@ -1,4 +1,4 @@
-import { Badge, Col, Nav, Row, Tab } from 'react-bootstrap';
+import { Badge, Col, Nav, Row, Tab, Table } from 'react-bootstrap';
 import TodoStudyLogo from '../logos/TodoStudyLogo';
 
 /**
@@ -102,25 +102,75 @@ export function ProjectBadge({ nolink = false, nomargin = false, name, href } : 
 }
 
 /**
- * A module entry within each UniGradesTab pane. Represents a module and their grades.
- * Requires the following prop:
+ * A table of modules within each UniGradesTab pane. Represents a list of modules
+ * taken during the semester and their grades. Requires the following prop:
  * 
+ * - children: The list of `GradeEntry` objects that form the grade table for a
+ *   specific semester.
+ * 
+ * Example usage:
+ * ```
+ * <GradeTable>
+ *   <GradeEntry course="MA2001 Linear Algebra I" grade="A+">
+ *     <UnitsBadge />
+ *   </GradeEntry> 
+ * </GradeTable>
+ * ```
+ * @returns The component representing a table of modules taken within a semester
+ * within a UniGradesTab pane.
+ */
+function GradeTable({ children } : { children : React.ReactNode }) {
+    return (
+        <Table striped bordered responsive hover>
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Grade</th>
+                    <th>Other Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                { children }
+            </tbody>
+        </Table>
+    )
+}
+
+/**
+ * A module entry within each UniGradesTab pane. Represents a module and their grades.
+ * Must be a child of the GradeTable component. Requires the following props:
+ * 
+ * - course: The course the grade entry refers to.
+ * - grade: The grade of the module. If left an empty string, it means that the grade is
+ *   unannounced, and a placeholder grade `<i>TBA</i>` is used instead.
  * - children: The content of the module/grade entry with the UniGradesTab pane.
  * 
  * Example usage:
  * ```
- * <GradeEntry>
- *     <strong>MA2001 Linear Algebra I: </strong>A+
+ * <GradeEntry course="MA2001 Linear Algebra I" grade="A+">
  *     <UnitsBadge />
  * </GradeEntry>
  * ```
  * @returns The component representing a module within a UniGradesTab pane.
  */
-function GradeEntry({ children } : { children : React.ReactNode }) {
+function GradeEntry({ course, grade, children } : { course : string, grade : string, children : React.ReactNode }) {
     return (
-        <li>
-            { children }
-        </li>
+        <tr>
+            <td>
+                <strong style={{ fontWeight: 600 }}>
+                    { course }
+                </strong>
+            </td>
+            <td>
+                { grade === "" ? <i>TBA</i> : grade }
+            </td>
+            <td>
+                { /* column for badges */ }
+                <div style={{ marginLeft: "-0.3em" }}>
+                    { children }
+                </div>
+            </td>
+        </tr>
     )
 }
 
@@ -137,195 +187,169 @@ export default function UniGradesTab() {
                     <Col sm={3}>
                         <Nav variant="pills" className="flex-column">
                             <Nav.Item>
-                                <Nav.Link eventKey="Y1S1">Y1S1</Nav.Link>
+                                <Nav.Link eventKey="Y1S1"><span title="Year 1 Semester 1 (Academic Year 2022/23)">Y1S1 (Aug &ndash; Dec 2022)</span></Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="Y1S2">Y1S2</Nav.Link>
+                                <Nav.Link eventKey="Y1S2"><span title="Year 1 Semester 2 (Academic Year 2022/23)">Y1S2 (Jan &ndash; May 2023)</span></Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="Y2S1">Y2S1</Nav.Link>
+                                <Nav.Link eventKey="Y2S1"><span title="Year 2 Semester 1 (Academic Year 2023/24)">Y2S1 (Aug &ndash; Dec 2023)</span></Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="Y2S2">Y2S2</Nav.Link>
+                                <Nav.Link eventKey="Y2S2"><span title="Year 2 Semester 2 (Academic Year 2023/24)">Y2S2 (Jan &ndash; May 2024)</span></Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="Y3S1">Y3S1</Nav.Link>
+                                <Nav.Link eventKey="Y3S1"><span title="Year 3 Semester 1 (Academic Year 2024/25)">Y3S1 (Aug &ndash; Dec 2024)</span></Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="Y3S2">Y3S2</Nav.Link>
+                                <Nav.Link eventKey="Y3S2"><span title="Year 3 Semester 2 (Academic Year 2024/25)">Y3S2 (Jan &ndash; May 2025)</span></Nav.Link>
                             </Nav.Item>
                         </Nav>
                     </Col>
                     <Col sm={9} id="tab-modules">
                         <Tab.Content>
                             <Tab.Pane eventKey="Y1S1">
-                                <ul>
-                                    <GradeEntry>
-                                        <strong>CS1101S Programming Metholodogy: </strong>A
+                                <GradeTable>
+                                    <GradeEntry course="CS1101S Programming Metholodogy" grade="A">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>CS1231S Discrete Structures: </strong>A
+                                    <GradeEntry course="CS1231S Discrete Structures" grade="A">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>MA2001 Linear Algebra I: </strong>A+
+                                    <GradeEntry course="MA2001 Linear Algebra I" grade="A+">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>EC1101E Introduction to Economic Analysis: </strong>B+
+                                    <GradeEntry course="EC1101E Introduction to Economic Analysis" grade="B+">
                                         <UnitsBadge />
                                         <SuBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>ST1131 Introduction to Statistics and Statistical Computing: </strong>B+ 
+                                    <GradeEntry course="ST1131 Introduction to Statistics and Statistical Computing" grade="B+">
                                         <UnitsBadge />
                                         <SuBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>CFG1002 Career Catalyst: </strong>CS
+                                    <GradeEntry course="CFG1002 Career Catalyst" grade="CS">
                                         <UnitsBadge units={2} />
                                         <CsCuBadge />
                                     </GradeEntry>
-                                </ul>
+                                </GradeTable>
                             </Tab.Pane>
                             <Tab.Pane eventKey="Y1S2">
-                                <ul>
-                                    <GradeEntry>
-                                        <strong>CS2030S Programming Metholodogy II: </strong>A+
+                                <GradeTable>
+                                    <GradeEntry course="CS2030S Programming Metholodogy II" grade="A+">
                                         <UnitsBadge />
                                         <TopBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>CS2040S Data Structures and Algorithms: </strong>A
+                                    <GradeEntry course="CS2040S Data Structures and Algorithms" grade="A">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>MA1521 Calculus for Computing: </strong>A+
+                                    <GradeEntry course="MA1521 Calculus for Computing" grade="A+">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>ES2660 Communicating in the Information Age: </strong>B
+                                    <GradeEntry course="ES2660 Communicating in the Information Age" grade="B">
                                         <UnitsBadge />
                                         <SuBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>IS1108 Digital Ethics and Data Privacy: </strong>A
+                                    <GradeEntry course="IS1108 Digital Ethics and Data Privacy" grade="A">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>CS1010R Programming Methodology: </strong>A+
+                                    <GradeEntry course="CS1010R Programming Methodology" grade="A+">
                                         <UnitsBadge units={1} />
                                     </GradeEntry>
-                                </ul>
+                                </GradeTable>
                             </Tab.Pane>
                             <Tab.Pane eventKey="Y2S1">
-                                <ul>
-                                    <GradeEntry>
-                                        <strong>CS2100 Computer Organisation: </strong>A+
+                                <GradeTable>
+                                    <GradeEntry course="CS2100 Computer Organisation" grade="A+">
                                         <UnitsBadge />
                                         <TopBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>CS2103T Software Engineering: </strong>A
+                                    <GradeEntry course="CS2103T Software Engineering" grade="A">
                                         <UnitsBadge />
                                         <ProjectBadge name="iVolunteer" href="/#projects#school-projects" />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>CS2101 Effective Communication for Computing Professionals: </strong>B
+                                    <GradeEntry course="CS2101 Effective Communication for Computing Professionals" grade="B">
                                         <UnitsBadge />
                                         <SuBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>IS2238 Economics of IT and AI: </strong>B+
+                                    <GradeEntry course="IS2238 Economics of IT and AI" grade="B+">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>EC2101 Microeconomic Analysis I: </strong>A
+                                    <GradeEntry course="EC2101 Microeconomic Analysis I" grade="A">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>CP2106 Independent Software Development Project (Orbital): </strong>CS - attained Apollo 11 (Advanced) achievement level. Done over Y1 summer.
+                                    <GradeEntry course="CP2106 Independent Software Development Project (Orbital)" grade="CS">
                                         <UnitsBadge />
                                         <CsCuBadge />
                                         <ProjectBadge name={<TodoStudyLogo green={ false } />} href="/#projects#school-projects" />
+                                        <div style={{ marginLeft: "0.3em" }}>
+                                            <small className="text-muted" style={{ fontSize: "0.8rem" }}>
+                                                Attained Apollo 11 (Advanced) achievement level. Done over Y1 summer.
+                                            </small>
+                                        </div>
                                     </GradeEntry>
-                                </ul>
+                                </GradeTable>
                             </Tab.Pane>
                             <Tab.Pane eventKey="Y2S2">
-                                <ul>
-                                    <li>
-                                        <strong>
-                                            <a href="/#awards#academic-achievements">Dean's List, AY2023/2024 Semester 2</a>
-                                        </strong>
-                                    </li>
-                                    <GradeEntry>
-                                        <strong>CS2102 Database Systems: </strong>A
+                                <p>
+                                    <strong>Award: </strong>
+                                    <span style={{ fontWeight: 600 }}>
+                                        <a href="/#awards#academic-achievements">Dean's List, AY2023/2024 Semester 2</a>
+                                    </span>
+                                </p>
+                                <GradeTable>
+                                    <GradeEntry course="CS2102 Database Systems" grade="A">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>CS2107 Introduction to Information Security: </strong>A
+                                    <GradeEntry course="CS2107 Introduction to Information Security" grade="A">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>CS2109S Introduction to AI and Machine Learning: </strong>A-
+                                    <GradeEntry course="CS2109S Introduction to AI and Machine Learning" grade="A-">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>ST2334 Probability and Statistics: </strong>A+
+                                    <GradeEntry course="ST2334 Probability and Statistics" grade="A+">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>ACC1701X Accounting for Decision Makers: </strong>A+
+                                    <GradeEntry course="ACC1701X Accounting for Decision Makers" grade="A+">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>CP2201 Journey of the Innovator: </strong>CS
+                                    <GradeEntry course="CP2201 Journey of the Innovator" grade="CS">
                                         <UnitsBadge units={2} />
                                         <CsCuBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>CFG1003 Financial Wellbeing - Introduction: </strong>CS
+                                    <GradeEntry course="CFG1003 Financial Wellbeing - Introduction" grade="CS">
                                         <UnitsBadge units={0} />
                                         <CsCuBadge />
                                     </GradeEntry>
-                                </ul>
+                                </GradeTable>
                             </Tab.Pane>
                             <Tab.Pane eventKey="Y3S1">
-                                <ul>
-                                    <GradeEntry>
-                                        <strong>CS3219 Software Engineering Principles and Patterns</strong>
+                                <GradeTable>
+                                    <GradeEntry course="CS3219 Software Engineering Principles and Patterns" grade="">
                                         <UnitsBadge />
                                         <ProjectBadge name="PeerPrep" href="/#projects#school-projects" />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>CS3230 Design and Analysis of Algorithms</strong>
+                                    <GradeEntry course="CS3230 Design and Analysis of Algorithms" grade="">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>CS2106 Introduction to Operating Systems</strong>
+                                    <GradeEntry course="CS2106 Introduction to Operating Systems" grade="">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>CS2105 Introduction to Computer Networks</strong>
+                                    <GradeEntry course="CS2105 Introduction to Computer Networks" grade="">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>EC3101 Microeconomic Analysis II</strong>
+                                    <GradeEntry course="EC3101 Microeconomic Analysis II" grade="">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>CP3108A Independent Work</strong>
+                                    <GradeEntry course="CP3108A Independent Work" grade="">
                                         <UnitsBadge units={2} />
                                         <ProjectBadge name="Migrate AB3 to Java 17" href="/#projects#school-projects" />
                                         {/* <CsCuBadge /> */}
                                     </GradeEntry>
-                                    <GradeEntry>
-                                        <strong>CFG1004 Financial Wellbeing - Art and Science of Investing</strong>
+                                    <GradeEntry course="CFG1004 Financial Wellbeing - Art and Science of Investing" grade="">
                                         <UnitsBadge units={2} />
                                         {/* <CsCuBadge /> */}
                                     </GradeEntry>
-                                </ul>
+                                </GradeTable>
                             </Tab.Pane>
                             <Tab.Pane eventKey="Y3S2">
                                 <em>Semester has not started yet!</em>

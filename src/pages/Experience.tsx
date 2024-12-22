@@ -41,7 +41,7 @@ function ExperienceMainBody({ screenWidth } : {screenWidth : number}) {
                         screenWidth={screenWidth}>
                         <ul>
                             <li>Minor in Economics</li>
-                            <li><strong>GPA: </strong>4.91/5</li>
+                            <li><strong>GPA: </strong>4.91/5 (as of Year 3 Semester 1)</li>
                             <li><strong>Expected Graduation Year: </strong>2026</li>
                         </ul>
                         <Accordion defaultActiveKey="coursework">
@@ -120,8 +120,9 @@ function ExperienceMainBody({ screenWidth } : {screenWidth : number}) {
                     <li><strong>Software proficiency: </strong>Microsoft Office suite (Word, Excel, PowerPoint), Adobe Photoshop, Adobe Illustrator, Canva, Figma, video editing software</li>
                     <li><strong>Programming languages: </strong>Python, Java, HTML/CSS/JavaScript, C++, C#, C, SQL</li>
                     <li><strong>Web development frameworks/libraries: </strong>React, Vue, Bootstrap, JQuery, Material UI</li>
-                    <li><strong>Backend frameworks: </strong>Django, Spring Boot</li>
+                    <li><strong>Backend frameworks: </strong>Express.js, Django, Spring Boot</li>
                     <li><strong>Machine learning frameworks: </strong>Scikit-learn, PyTorch</li>
+                    <li>Able to harness OpenAI API + prompt engineering in real-life applications</li>
                     <li><strong>Other languages: </strong>LaTeX typesetting, R, Matlab</li>
                 </ul>
             </PageSection>
