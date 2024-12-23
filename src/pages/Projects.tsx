@@ -40,7 +40,10 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                 </Stack>
             </PageSection>
             <MainPageDivider />
-            <PageSection title="Personal Projects">
+            <PageSection 
+                title="Personal Projects"
+                description="Software projects I have worked on the past few years."
+            >
                 <ProjectContainer>
                     <ProjectColumn screenWidth={screenWidth}>
                         <ProjectInfo
@@ -79,16 +82,6 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                                 A Lights Out simulator puzzle game. In this game, you move by clicking on a tile in the grid. This causes the tile clicked and the 4 surrounding tiles to toggle colour (dark to light, light to dark). You solve the puzzle by making all the dark tiles light in colour.
                             </p>
                         </ProjectInfo>
-                        <ProjectInfo
-                            title="Single-Page Projects"
-                            date="13 Jun 2024 (main page)"
-                            languages="HTML, CSS (main page)"
-                            libraries="Bootstrap, Font Awesome icons (main page)"
-                            url="https://brein62.github.io/single-page-projects">
-                            <p className="justify lastp">
-                                A bunch of single-page web applications I developed over the years. Currently consists of 2 projects: <a href="https://brein62.github.io/single-page-projects/chartester/">chartester</a> and <a href="https://brein62.github.io/single-page-projects/lap-timer/">lap-timer</a>. These projects will be enhanced to include mobile functionality in the future.
-                            </p>
-                        </ProjectInfo>
                     </ProjectColumn>
                     <ProjectColumn second screenWidth={screenWidth}>
                         <ProjectInfo
@@ -114,6 +107,26 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                             </p>
                         </ProjectInfo>
                         <ProjectInfo
+                            title="Single-Page Projects"
+                            date="13 Jun 2024 (main page)"
+                            languages="HTML, CSS (main page)"
+                            libraries="Bootstrap, Font Awesome icons (main page)"
+                            url="https://brein62.github.io/single-page-projects">
+                            <p className="justify lastp">
+                                A bunch of single-page web applications I developed over the years. Currently consists of 2 projects: <a href="https://brein62.github.io/single-page-projects/chartester/">chartester</a> and <a href="https://brein62.github.io/single-page-projects/lap-timer/">lap-timer</a>. These projects will be enhanced to include mobile functionality in the future.
+                            </p>
+                        </ProjectInfo>
+                    </ProjectColumn>
+                </ProjectContainer>
+            </PageSection>
+            <MainPageDivider />
+            <PageSection 
+                title="Other Personal Projects"
+                description="Other projects I have worked on the past few years which are not fully software products."    
+            >
+                <ProjectContainer>
+                    <ProjectColumn screenWidth={screenWidth}>
+                        <ProjectInfo
                             title="Online Budget Tracker"
                             date="Jan 2020 &ndash; Feb 2021"
                             languages="Google Apps Script (JavaScript)"
@@ -123,11 +136,24 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                             </p>
                         </ProjectInfo>
                     </ProjectColumn>
+                    <ProjectColumn screenWidth={screenWidth}>
+                        <ProjectInfo
+                            title="Summarised Notes and Cheatsheets"
+                            date="Aug 2022 &ndash; Present"
+                            languages="LaTeX, Microsoft Word"
+                        >
+                            <p className="justify lastp">
+                                Summarised notes for NUS courses/modules I have done over the years for exams, to be published eventually. For courses with a closed-book single-page cheatsheet requirement, my notes may be extremely crammed (to fit my requirements) and may not be suitable for most students. 
+                            </p>
+                        </ProjectInfo>
+                    </ProjectColumn>
                 </ProjectContainer>
             </PageSection>
             <MainPageDivider />
-            <PageSection title="School Projects">
-                <p className="justify">These are projects that I did as part of school modules or assessments.</p>
+            <PageSection 
+                title="School Projects"
+                description="These are projects that I did as part of school modules or assessments."
+            >
                 <ProjectContainer>
                     <ProjectColumn screenWidth={ screenWidth }>
                         <ProjectInfo
@@ -204,8 +230,10 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
                 </ProjectContainer>
             </PageSection>
             <MainPageDivider />
-            <PageSection title="Early Projects">
-                <p className="justify">These are projects that I did in my early years of programming.</p>
+            <PageSection 
+                title="Early Projects"
+                description="These are projects that I did in my early years of programming."
+            >
                 <ProjectContainer>
                     <ProjectColumn screenWidth={ screenWidth }>
                         <ProjectInfo
