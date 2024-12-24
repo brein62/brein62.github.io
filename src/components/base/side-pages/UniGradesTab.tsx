@@ -324,30 +324,30 @@ export default function UniGradesTab() {
                             </Tab.Pane>
                             <Tab.Pane eventKey="Y3S1">
                                 <GradeTable>
-                                    <GradeEntry course="CS3219 Software Engineering Principles and Patterns" grade="">
+                                    <GradeEntry course="CS3219 Software Engineering Principles and Patterns" grade="A-">
                                         <UnitsBadge />
                                         <ProjectBadge name="PeerPrep" href="/#projects#school-projects" />
                                     </GradeEntry>
-                                    <GradeEntry course="CS3230 Design and Analysis of Algorithms" grade="">
+                                    <GradeEntry course="CS3230 Design and Analysis of Algorithms" grade="A-">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry course="CS2106 Introduction to Operating Systems" grade="">
+                                    <GradeEntry course="CS2106 Introduction to Operating Systems" grade="A+">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry course="CS2105 Introduction to Computer Networks" grade="">
+                                    <GradeEntry course="CS2105 Introduction to Computer Networks" grade="A+">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry course="EC3101 Microeconomic Analysis II" grade="">
+                                    <GradeEntry course="EC3101 Microeconomic Analysis II" grade="A-">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry course="CP3108A Independent Work" grade="">
+                                    <GradeEntry course="CP3108A Independent Work" grade="CS">
                                         <UnitsBadge units={2} />
                                         <ProjectBadge name="Migrate AB3 to Java 17" href="/#projects#school-projects" />
-                                        {/* <CsCuBadge /> */}
+                                        <CsCuBadge />
                                     </GradeEntry>
-                                    <GradeEntry course="CFG1004 Financial Wellbeing - Art and Science of Investing" grade="">
+                                    <GradeEntry course="CFG1004 Financial Wellbeing - Art and Science of Investing" grade="CS">
                                         <UnitsBadge units={2} />
-                                        {/* <CsCuBadge /> */}
+                                        <CsCuBadge />
                                     </GradeEntry>
                                 </GradeTable>
                             </Tab.Pane>
