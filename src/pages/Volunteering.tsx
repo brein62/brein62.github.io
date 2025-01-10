@@ -13,6 +13,7 @@ import ProjectColumn from '../components/base/side-pages/ProjectColumn';
 import EventInfo from '../components/base/side-pages/EventInfo';
 import EventList from '../components/base/side-pages/EventList';
 import { AnchorScroll } from '../utils/AnchorScroll';
+import LinkToAwardButton from '../components/buttons/LinkToAwardButton';
 
 /**
  * Returns the main body of the Volunteering page, given the following props:
@@ -70,6 +71,9 @@ function VolunteeringMainBody({ screenWidth } : {screenWidth : number}) {
                         <p className="justify">
                             From Jun 2023 to Jun 2024, I joined YRO's executive committee as the Programmes Head, involving planning games for the children for the first and last sessions for each semester, planning the games and activity booklet for the annual outing which occurred on 1 Jun 2024, as well as borrowing country-themed books for the group storytelling portion of the programme.
                         </p>
+                        <LinkToAwardButton href="/volunteering/yro-certificate-of-appreciation.png">
+                            Certificate of Appreciation (Programmes Head)
+                        </LinkToAwardButton>
                     </ResumeEntry>
                     <ResumeEntry
                         title="Project Embrace"

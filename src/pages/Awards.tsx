@@ -170,7 +170,7 @@ function AwardsMainBody({ screenWidth } : {screenWidth : number}) {
                         dates="Dec 2019"
                         screenWidth={screenWidth}>
                         <p className="justify lastp">
-                            An honourable mention from my JC as an inspirational story for future students, published as an article on the school website. Citation: "From not uttering a single word to others, I became a more confident communicator since entrolling in JC".
+                            An honourable mention from my JC as an inspirational story for future students, published as an article on the school website. Citation: "From not uttering a single word to others, I became a more confident communicator since enrolling in JC". Full article <a rel="noopener noreferrer" target="_blank" href="https://www.jpjc.moe.edu.sg/accomplishments/students/a-level-inspirational-stories/2020/brendan/">here</a>.
                         </p>
                     </ResumeEntry>
                     <ResumeEntry

@@ -182,7 +182,7 @@ function GradeEntry({ course, grade, children } : { course : string, grade : str
 export default function UniGradesTab() {
     return (
         <div style={{ border: "1px dashed", borderRadius: "10px", padding: "0.5em" }}>
-            <Tab.Container id="left-tabs-example" defaultActiveKey="Y3S1">
+            <Tab.Container id="left-tabs-example" defaultActiveKey="Y3S2">
                 <Row>
                     <Col sm={3}>
                         <Nav variant="pills" className="flex-column">
@@ -352,7 +352,24 @@ export default function UniGradesTab() {
                                 </GradeTable>
                             </Tab.Pane>
                             <Tab.Pane eventKey="Y3S2">
-                                <em>Semester has not started yet!</em>
+                                <GradeTable>
+                                    <GradeEntry course="CS3264 Foundations of Machine Learning" grade="">
+                                        <UnitsBadge />
+                                    </GradeEntry>
+                                    <GradeEntry course="CS3210 Parallel Computing" grade="">
+                                        <UnitsBadge />
+                                    </GradeEntry>
+                                    <GradeEntry course="IS2218 Digital Platforms for Business" grade="">
+                                        <UnitsBadge />
+                                    </GradeEntry>
+                                    <GradeEntry course="FIN2704X Finance" grade="">
+                                        <UnitsBadge />
+                                    </GradeEntry>
+                                    <GradeEntry course="GESS1025 Singapore: Imagining the Next 50 Years" grade="">
+                                        <UnitsBadge />
+                                        {/* <CsCuBadge /> */}
+                                    </GradeEntry>
+                                </GradeTable>
                             </Tab.Pane>
                         </Tab.Content>
                     </Col>
