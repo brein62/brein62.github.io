@@ -119,7 +119,7 @@ function ExperienceMainBody({ screenWidth } : {screenWidth : number}) {
                     <li><strong>Languages: </strong>English (fluent), Mandarin Chinese (conversational)</li>
                     <li><strong>Software proficiency: </strong>Microsoft Office suite (Word, Excel, PowerPoint), Adobe Photoshop, Adobe Illustrator, Canva, Figma, video editing software</li>
                     <li><strong>Programming languages: </strong>Python, Java, HTML/CSS/JavaScript, C++, C#, C, SQL</li>
-                    <li><strong>Web development frameworks/libraries: </strong>React, Vue, Bootstrap, JQuery, Material UI</li>
+                    <li><strong>Web development frameworks/libraries: </strong>React, Vue, Tailwind, shadcn/ui, Bootstrap, JQuery, Material UI</li>
                     <li><strong>Backend frameworks: </strong>Express.js, Django, Spring Boot</li>
                     <li><strong>Machine learning frameworks: </strong>Scikit-learn, PyTorch</li>
                     <li>Able to harness OpenAI API + prompt engineering in real-life applications</li>
