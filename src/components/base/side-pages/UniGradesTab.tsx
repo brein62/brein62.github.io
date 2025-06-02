@@ -353,21 +353,21 @@ export default function UniGradesTab() {
                             </Tab.Pane>
                             <Tab.Pane eventKey="Y3S2">
                                 <GradeTable>
-                                    <GradeEntry course="CS3264 Foundations of Machine Learning" grade="">
+                                    <GradeEntry course="CS3264 Foundations of Machine Learning" grade="A-">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry course="CS3210 Parallel Computing" grade="">
+                                    <GradeEntry course="CS3210 Parallel Computing" grade="A">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry course="IS2218 Digital Platforms for Business" grade="">
+                                    <GradeEntry course="IS2218 Digital Platforms for Business" grade="A+">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry course="FIN2704X Finance" grade="">
+                                    <GradeEntry course="FIN2704X Finance" grade="A+">
                                         <UnitsBadge />
                                     </GradeEntry>
-                                    <GradeEntry course="GESS1025 Singapore: Imagining the Next 50 Years" grade="">
+                                    <GradeEntry course="GESS1025 Singapore: Imagining the Next 50 Years" grade="CS">
                                         <UnitsBadge />
-                                        {/* <CsCuBadge /> */}
+                                        <CsCuBadge />
                                     </GradeEntry>
                                 </GradeTable>
                             </Tab.Pane>

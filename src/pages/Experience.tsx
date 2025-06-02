@@ -41,7 +41,7 @@ function ExperienceMainBody({ screenWidth } : {screenWidth : number}) {
                         screenWidth={screenWidth}>
                         <ul>
                             <li>Minor in Economics</li>
-                            <li><strong>GPA: </strong>4.86/5 (as of Dec 2024)</li>
+                            <li><strong>GPA: </strong>4.86/5 (as of Jun 2025)</li>
                             <li><strong>Expected Graduation Year: </strong>2026</li>
                         </ul>
                         <Accordion defaultActiveKey="coursework">

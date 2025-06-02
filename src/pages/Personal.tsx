@@ -14,6 +14,23 @@ import { useEffect } from "react";
 import { AnchorScroll } from "../utils/AnchorScroll";
 
 /**
+ * @returns My age, calculated from my birth date.
+ */
+function Age() {
+    const birthDate = new Date("2001-10-24");
+    const today = new Date();
+    const age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+
+    // Adjust age if the birthday hasn't occurred yet this year
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        return <>{ age - 1 }</>;
+    }
+    
+    return <>{ age }</>;
+}
+
+/**
  * Returns the main body of the Personal page, given the following props:
  * 
  * - screenWidth: The screen width of the main body of the Personal page to be displayed.
@@ -29,7 +46,7 @@ function PersonalMainBody({ screenWidth } : { screenWidth : number } ) {
         <article>
             <PageSection title="Personal &amp; Hobbies">
                 <p className="big justify lastp">
-                    I am currently 22 years old. In my spare time, you can either find me programming side projects or learning many other things! I try to maintain a fit and healthy lifestyle despite my busy schedule through running around my neighbourhood or weight training. As a Computer Science student, I also do like to work my brain through puzzle games and love speedcubing. I also play rhythm games as well on my PC/mobile/consoles.
+                    I am currently <Age /> years old. In my spare time, you can either find me programming side projects or learning many other things! I try to maintain a fit and healthy lifestyle despite my busy schedule through running around my neighbourhood or weight training. As a Computer Science student, I also do like to work my brain through puzzle games and love speedcubing. I also play rhythm games as well on my PC/mobile/consoles.
                 </p>
             </PageSection>
             <MainPageDivider />
