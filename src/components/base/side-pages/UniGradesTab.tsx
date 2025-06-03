@@ -204,6 +204,9 @@ export default function UniGradesTab() {
                             <Nav.Item>
                                 <Nav.Link eventKey="Y3S2"><span title="Year 3 Semester 2 (Academic Year 2024/25)">Y3S2 (Jan &ndash; May 2025)</span></Nav.Link>
                             </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link eventKey="Y3ST"><span title="Year 3 Special Term (Academic Year 2024/25)">Y3 Special Term (May &ndash; Aug 2025)</span></Nav.Link>
+                            </Nav.Item>
                         </Nav>
                     </Col>
                     <Col sm={9} id="tab-modules">
@@ -368,6 +371,14 @@ export default function UniGradesTab() {
                                     <GradeEntry course="GESS1025 Singapore: Imagining the Next 50 Years" grade="CS">
                                         <UnitsBadge />
                                         <CsCuBadge />
+                                    </GradeEntry>
+                                </GradeTable>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="Y3ST">
+                                <GradeTable>
+                                    <GradeEntry course="CP3200 Internship" grade="">
+                                        <UnitsBadge units={6} />
+                                        {/*<CsCuBadge />*/}
                                     </GradeEntry>
                                 </GradeTable>
                             </Tab.Pane>
