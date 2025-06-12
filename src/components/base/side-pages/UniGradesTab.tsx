@@ -355,6 +355,12 @@ export default function UniGradesTab() {
                                 </GradeTable>
                             </Tab.Pane>
                             <Tab.Pane eventKey="Y3S2">
+                                <p>
+                                    <strong>Award: </strong>
+                                    <span style={{ fontWeight: 600 }}>
+                                        <a href="/#awards#academic-achievements">Dean's List, AY2024/2025 Semester 2</a>
+                                    </span>
+                                </p>
                                 <GradeTable>
                                     <GradeEntry course="CS3264 Foundations of Machine Learning" grade="A-">
                                         <UnitsBadge />
