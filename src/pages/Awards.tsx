@@ -37,6 +37,20 @@ function AwardsMainBody({ screenWidth } : {screenWidth : number}) {
                 <ResumeList>
                     <ResumeEntry
                         title="Dean's List"
+                        dates="10 Jun 2025"
+                        subtitle="AY2024/2025 Semester 2"
+                        screenWidth={screenWidth}>
+                        <p className="justify">
+                            I was the top 5&ndash;10% of the cohort during my Year 3 Sem 2 (<strong>AY2024/2025 Semester 2</strong>) and was placed on the <strong>Dean's List</strong> for my faculty during this semester for outstanding academic performance.
+                        </p>
+                        <p className="justify lastp">
+                            <LinkToAwardButton href="https://credentials.nus.edu.sg/54028489-4bff-4c68-a8af-ac8b265001f5">
+                                Dean's List Award
+                            </LinkToAwardButton>
+                        </p>
+                    </ResumeEntry>
+                    <ResumeEntry
+                        title="Dean's List"
                         dates="11 Jun 2024"
                         subtitle="AY2023/2024 Semester 2"
                         screenWidth={screenWidth}>
