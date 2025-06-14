@@ -174,3 +174,14 @@ hr {
 .nomb {
   margin-bottom: 0;
 }
+
+.moreinfo {
+  text-decoration: underline; /* Add underline */
+  text-decoration-style: dotted; /* Make the underline dotted */
+  text-decoration-color: rgba(0, 0, 0, 0.4); /* Set a low-opacity color for the underline */
+  cursor: default; /* Default cursor */
+}
+
+.moreinfo:hover {
+  cursor: pointer; /* Change cursor to pointer on hover */
+}

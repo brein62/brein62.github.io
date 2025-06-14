@@ -11,7 +11,7 @@ import { Col } from "react-bootstrap";
  * 
  * @returns The component representing the columns that contain the ProjectInfo objects within the ProjectContainer.
  */
-export default function ProjectColumn({ second = false, screenWidth, children } : { second? : boolean, screenWidth : number, children : React.ReactNode }) {
+export default function ProjectColumn({ second = false, screenWidth, children } : { second? : boolean, screenWidth : number, children? : React.ReactNode }) {
     return (
         <Col style={(second && screenWidth < 768) ? { marginTop: 0 } : {}}>
             { children }

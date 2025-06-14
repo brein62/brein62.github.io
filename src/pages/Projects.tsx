@@ -231,6 +231,27 @@ function ProjectsMainBody({ screenWidth } : { screenWidth : number }) {
             </PageSection>
             <MainPageDivider />
             <PageSection 
+                title="Hackathon Projects"
+                description="These are projects that I did as part of hackathon submissions."
+                >
+                <ProjectColumn screenWidth={ screenWidth }>
+                    <ProjectInfo title="Muhammadiyah Welfare Home System (Hack4Good 2025)"
+                        date="11 &ndash;16 Jan 2025"
+                        languages="HTML, CSS, JavaScript, TypeScript"
+                        libraries="React, Tailwind, shadcn, MongoDB, Mongoose"
+                        frameworks="Express.js, Node.js"
+                        url={[{"name": "Repository", "url": "https://github.com/tiongMax/Hack4Good-2025-404-Brain-Not-Found-"}]}
+                    >
+                        <p className="justify">
+                            A web application developed for the Hack4Good 2025 hackathon, where we were tasked to develop a web application for local non-profit organisations, including Muhammadiyah Welfare Home (MWH). The web application is a <strong>minimart and inventory management system</strong> that allows MWH to manage their inventory and stock of items while also allowing staff to manage and approve their residents' purchases of items from the minimart.
+                        </p>
+                    </ProjectInfo>
+                </ProjectColumn>
+                <ProjectColumn screenWidth={ screenWidth }>
+                </ProjectColumn>
+            </PageSection>
+            <MainPageDivider />
+            <PageSection 
                 title="Early Projects"
                 description="These are projects that I did in my early years of programming."
             >

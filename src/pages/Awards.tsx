@@ -99,6 +99,20 @@ function AwardsMainBody({ screenWidth } : {screenWidth : number}) {
             <MainPageDivider />
             <PageSection title="Computer Science Competitions">
                 <ResumeList>
+                    <ResumeEntry
+                        title="Hack4Good 2025"
+                        subtitle="Participant"
+                        dates="11 &ndash; 17 Jan 2025"
+                        screenWidth={screenWidth}>
+                        <p className="justify">
+                            A student-run hackathon by Developer Student Club NUS that aims for students to use technology to contribute to social causes by solving problems faced by non-profit organisations (NPOs). During the week-long qualifying round of the hackathon, we developed a prototype full-stack web application using the <span className="moreinfo" title="MongoDB, Express, React, Node.js">MERN stack</span> as a team of 4 to fit the NPO's requirements. I focused on key backend and frontend components while also supporting team members with Git and project structure, ensuring smooth collaboration despite varying experience levels.
+                        </p>
+                        <p className="justify lastp">
+                            <LinkButton variant="primary" newTab={ false } href="/#projects#muhammadiyah-welfare-home-system-(hack4good-2025)" icon={ faSquareArrowUpRight }>
+                                Link to project description
+                            </LinkButton>
+                        </p>
+                    </ResumeEntry> 
                     <ResumeEntry 
                         title="National Olympiad in Informatics (NOI) 2019"
                         subtitle="Silver Medal"
