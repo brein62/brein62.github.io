@@ -12,8 +12,7 @@ import Personal from './pages/Personal';
  * Main function for personal portfolio site.
  */
 function App() {
-
-  document.title = "Personal Portfolio | Brendan Koh";
+  document.title = 'Personal Portfolio | Brendan Koh';
 
   return (
     <Routes>
@@ -23,7 +22,10 @@ function App() {
       <Route path="/projects" element={<Projects />} />
       <Route path="/volunteering" element={<Volunteering />} />
       <Route path="/personal" element={<Personal />} />
-      <Route path="*" element={<ErrorPage error="404 Not Found" errorDesc="The page requested could not be found." />} />
+      <Route
+        path="*"
+        element={<ErrorPage error="404 Not Found" errorDesc="The page requested could not be found." />}
+      />
     </Routes>
   );
 }
