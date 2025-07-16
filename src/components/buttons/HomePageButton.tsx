@@ -5,9 +5,9 @@ import { Button } from 'react-bootstrap';
  * @returns The button to return to the home page.
  */
 export default function HomePageButton() {
-    return (
-        <Button variant="primary" href="/">
-            Return to home page
-        </Button>
-    );
+  return (
+    <Button variant="primary" href="/">
+      Return to home page
+    </Button>
+  );
 }

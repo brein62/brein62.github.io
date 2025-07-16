@@ -17,11 +17,13 @@
   text-align: center;
   position: relative;
   opacity: 1;
-  box-shadow: 0 60px 80px 0 rgba(0,0,0, .3);
+  box-shadow: 0 60px 80px 0 rgba(0, 0, 0, 0.3);
   padding: 0 !important;
 }
 
-header, article, footer {
+header,
+article,
+footer {
   /*border: 1px solid black;*/
   width: 100%;
   margin: 0 auto;
@@ -64,7 +66,7 @@ p {
 }
 
 .desc {
-  font-style:italic;
+  font-style: italic;
 }
 
 .justify {
@@ -96,7 +98,7 @@ p {
 }
 
 .event-list li {
-  margin-bottom: .8em;
+  margin-bottom: 0.8em;
 }
 
 .event-title {
@@ -111,9 +113,9 @@ p {
   .container-inner {
     padding: 0;
   }
-  
+
   .event-date::before {
-    content: "\00a0(";
+    content: '\00a0(';
   }
 
   .event-date {
@@ -121,7 +123,7 @@ p {
   }
 
   .event-date::after {
-    content: ")";
+    content: ')';
   }
 }
 
@@ -133,15 +135,16 @@ p {
 
 @media only screen and (max-width: 575.98px) {
   #tab-modules {
-    padding-top: .6em;
+    padding-top: 0.6em;
   }
 }
 
 .resume-entry p {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
-.resume-event, .subtitle {
+.resume-event,
+.subtitle {
   margin-bottom: 0 !important;
 }
 
@@ -153,13 +156,20 @@ p {
   color: #808080;
 }
 
-hr { 
+hr {
   height: 1px;
-  width: 100% !important; 
-  margin: 0 auto !important; 
-  border: 5px !important; 
-  background-color: transparent !important; 
-  background-image: linear-gradient(to right, rgba(33, 37, 41, 0), rgba(33, 37, 41, 75), rgba(33, 37, 41, 100), rgba(33, 37, 41, 75), rgba(33, 37, 41, 0)) !important; 
+  width: 100% !important;
+  margin: 0 auto !important;
+  border: 5px !important;
+  background-color: transparent !important;
+  background-image: linear-gradient(
+    to right,
+    rgba(33, 37, 41, 0),
+    rgba(33, 37, 41, 75),
+    rgba(33, 37, 41, 100),
+    rgba(33, 37, 41, 75),
+    rgba(33, 37, 41, 0)
+  ) !important;
 }
 
 hr.minor { 
@@ -182,4 +192,15 @@ hr.minor {
 
 .nomb {
   margin-bottom: 0;
+}
+
+.moreinfo {
+  text-decoration: underline; /* Add underline */
+  text-decoration-style: dotted; /* Make the underline dotted */
+  text-decoration-color: rgba(0, 0, 0, 0.4); /* Set a low-opacity color for the underline */
+  cursor: default; /* Default cursor */
+}
+
+.moreinfo:hover {
+  cursor: pointer; /* Change cursor to pointer on hover */
 }
