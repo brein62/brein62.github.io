@@ -13,6 +13,7 @@ import LinkToAwardButton from '../components/buttons/LinkToAwardButton';
 import { faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
 import LinkButton from '../components/buttons/LinkButton';
 import { AnchorScroll } from '../utils/AnchorScroll';
+import ResumeDivider from '../components/base/side-pages/ResumeDivider';
 
 /**
  * Returns the main body of the Awards page, given the following props:
@@ -63,6 +64,21 @@ function AwardsMainBody({ screenWidth } : {screenWidth : number}) {
                             </LinkToAwardButton>
                         </p>
                     </ResumeEntry>
+                    <ResumeDivider />
+                    <ResumeEntry
+                        title="Top Student Award"
+                        dates="7 Jul 2025"
+                        subtitle="IS2218 Digital Platforms for Business"
+                        screenWidth={screenWidth}>
+                            <p className="justify lastp">
+                                <p className="justify">
+                                    I was one of the top performers for the module <strong>IS2218 Digital Platforms for Business</strong> (class of 442) during my Year 3 Sem 2 (<strong>AY2024/2025 Semester 2</strong>). This award distinguishes the top students among all students who have attained an A+ for the module.
+                                </p>
+                                <LinkToAwardButton href="https://credentials.nus.edu.sg/87fac53b-f3a1-471b-a52b-ac10b3cf2dab">
+                                    IS2218 Top Performer Certificate
+                                </LinkToAwardButton>
+                            </p>
+                    </ResumeEntry>
                     <ResumeEntry 
                         title="Top Student Award"
                         dates="12 Jan 2024"
@@ -91,6 +107,7 @@ function AwardsMainBody({ screenWidth } : {screenWidth : number}) {
                                 </LinkToAwardButton>
                             </p>
                     </ResumeEntry>
+                    <ResumeDivider />
                     <ResumeEntry 
                         title="Apollo 11 (Advanced) Achievement Level (Orbital 2023)"
                         dates="23 Aug 2023"

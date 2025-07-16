@@ -370,6 +370,7 @@ export default function UniGradesTab() {
                                     </GradeEntry>
                                     <GradeEntry course="IS2218 Digital Platforms for Business" grade="A+">
                                         <UnitsBadge />
+                                        <TopBadge />
                                     </GradeEntry>
                                     <GradeEntry course="FIN2704X Finance" grade="A+">
                                         <UnitsBadge />

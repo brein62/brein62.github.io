@@ -162,6 +162,15 @@ hr {
   background-image: linear-gradient(to right, rgba(33, 37, 41, 0), rgba(33, 37, 41, 75), rgba(33, 37, 41, 100), rgba(33, 37, 41, 75), rgba(33, 37, 41, 0)) !important; 
 }
 
+hr.minor { 
+  height: 1px;
+  width: 80% !important; 
+  margin: 0 auto !important; 
+  border: 5px !important; 
+  background-color: transparent !important; 
+  background-image: repeating-linear-gradient(to right, rgb(102, 106, 112), rgb(102, 106, 112) 5px, transparent 5px, transparent 10px) !important; 
+}
+
 .todo-study-logo {
   font-family: monospace;
   color: #00bf63;

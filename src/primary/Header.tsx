@@ -12,7 +12,7 @@ export default function Header() {
     return (
         <header>
             <h1>Brendan Koh</h1>
-            <p className="big desc">Year 3 Computer Science Student, NUS School of Computing</p>
+            <p className="big desc">Year 4 Computer Science Student, NUS School of Computing</p>
             <EmailTeleDisplay screenWidth={screenWidth}/>
         </header>
     );
