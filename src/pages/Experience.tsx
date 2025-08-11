@@ -1,16 +1,16 @@
-import { Accordion, Container } from "react-bootstrap";
-import Header from "../primary/Header";
-import Footer from "../primary/Footer";
-import PageSection from "../components/base/side-pages/PageSection";
-import MainPageDivider from "../components/base/main-page/MainPageDivider";
-import ResumeEntry from "../components/base/side-pages/ResumeEntry";
-import ResumeList from "../components/base/side-pages/ResumeList";
-import UniGradesTab, { ProjectBadge, SuBadge, TopBadge } from "../components/base/side-pages/UniGradesTab";
-import JcGradesTab from "../components/base/side-pages/JcGradesTab";
-import HomePageButton from "../components/buttons/HomePageButton";
-import { useWindowParams } from "../hooks/useWindowParams";
-import { AnchorScroll } from "../utils/AnchorScroll";
-import { useEffect } from "react";
+import { Accordion, Container } from 'react-bootstrap';
+import Header from '../primary/Header';
+import Footer from '../primary/Footer';
+import PageSection from '../components/base/side-pages/PageSection';
+import MainPageDivider from '../components/base/main-page/MainPageDivider';
+import ResumeEntry from '../components/base/side-pages/ResumeEntry';
+import ResumeList from '../components/base/side-pages/ResumeList';
+import UniGradesTab, { ProjectBadge, SuBadge, TopBadge } from '../components/base/side-pages/UniGradesTab';
+import JcGradesTab from '../components/base/side-pages/JcGradesTab';
+import HomePageButton from '../components/buttons/HomePageButton';
+import { useWindowParams } from '../hooks/useWindowParams';
+import { AnchorScroll } from '../utils/AnchorScroll';
+import { useEffect } from 'react';
 
 /**
  * Returns the main body of the Experience page, given the following props:
@@ -20,7 +20,7 @@ import { useEffect } from "react";
  * @returns The component containing the main body of the Experience page.
  */
 function ExperienceMainBody({ screenWidth }: { screenWidth: number }) {
-  document.title = "About Me & Experience | Brendan Koh";
+  document.title = 'About Me & Experience | Brendan Koh';
   useEffect(AnchorScroll, []);
 
   return (
@@ -63,7 +63,7 @@ function ExperienceMainBody({ screenWidth }: { screenWidth: number }) {
                     to pass/fail over 4 years.
                   </p>
                   <p className="justify">
-                    For more information about the <TopBadge nomargin nolink /> and{" "}
+                    For more information about the <TopBadge nomargin nolink /> and{' '}
                     <ProjectBadge nomargin nolink name="" href="#" /> badges, click on the respective badge to find out
                     about the projects and awards I have received for these modules!
                   </p>
@@ -204,7 +204,7 @@ function ExperienceMainBody({ screenWidth }: { screenWidth: number }) {
 export default function Experience() {
   const screenWidth = useWindowParams(true, false)[0];
 
-  document.title = "Experience | Brendan Koh";
+  document.title = 'Experience | Brendan Koh';
 
   return (
     <div className="container-wrap">

@@ -1,19 +1,19 @@
-import { Container, Stack } from "react-bootstrap";
-import Header from "../primary/Header";
-import Footer from "../primary/Footer";
-import PageSection from "../components/base/side-pages/PageSection";
-import MainPageDivider from "../components/base/main-page/MainPageDivider";
-import ResumeEntry from "../components/base/side-pages/ResumeEntry";
-import ResumeList from "../components/base/side-pages/ResumeList";
-import HomePageButton from "../components/buttons/HomePageButton";
-import { useWindowParams } from "../hooks/useWindowParams";
-import { useEffect } from "react";
-import TodoStudyLogo from "../components/base/logos/TodoStudyLogo";
-import LinkToAwardButton from "../components/buttons/LinkToAwardButton";
-import { faSquareArrowUpRight } from "@fortawesome/free-solid-svg-icons";
-import LinkButton from "../components/buttons/LinkButton";
-import { AnchorScroll } from "../utils/AnchorScroll";
-import ResumeDivider from "../components/base/side-pages/ResumeDivider";
+import { Container, Stack } from 'react-bootstrap';
+import Header from '../primary/Header';
+import Footer from '../primary/Footer';
+import PageSection from '../components/base/side-pages/PageSection';
+import MainPageDivider from '../components/base/main-page/MainPageDivider';
+import ResumeEntry from '../components/base/side-pages/ResumeEntry';
+import ResumeList from '../components/base/side-pages/ResumeList';
+import HomePageButton from '../components/buttons/HomePageButton';
+import { useWindowParams } from '../hooks/useWindowParams';
+import { useEffect } from 'react';
+import TodoStudyLogo from '../components/base/logos/TodoStudyLogo';
+import LinkToAwardButton from '../components/buttons/LinkToAwardButton';
+import { faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
+import LinkButton from '../components/buttons/LinkButton';
+import { AnchorScroll } from '../utils/AnchorScroll';
+import ResumeDivider from '../components/base/side-pages/ResumeDivider';
 
 /**
  * Returns the main body of the Awards page, given the following props:
@@ -85,7 +85,7 @@ function AwardsMainBody({ screenWidth }: { screenWidth: number }) {
           >
             <p className="justify lastp">
               <p className="justify">
-                I was one of the top performers for the module <strong>IS2218 Digital Platforms for Business</strong>{" "}
+                I was one of the top performers for the module <strong>IS2218 Digital Platforms for Business</strong>{' '}
                 (class of 442) during my Year 3 Sem 2 (<strong>AY2024/2025 Semester 2</strong>). This award
                 distinguishes the top students among all students who have attained an A+ for the module.
               </p>
@@ -118,7 +118,7 @@ function AwardsMainBody({ screenWidth }: { screenWidth: number }) {
             screenWidth={screenWidth}
           >
             <p className="justify">
-              I was one of the top performers (top 3% of the cohort) for the module{" "}
+              I was one of the top performers (top 3% of the cohort) for the module{' '}
               <strong>CS2030S Programming Methodology II</strong> (class of 749) during my Year 1 Sem 2 (
               <strong>AY2022/2023 Semester 2</strong>). This award distinguishes the top students among all students who
               have attained an A+ for the module.
@@ -138,9 +138,9 @@ function AwardsMainBody({ screenWidth }: { screenWidth: number }) {
           >
             <p className="justify">
               Orbital is a summer project primarily done by Y1 Computing undergraduates in order to gain first-hand
-              experience in developing applications of their choice. I worked alongside my friend to create{" "}
-              <TodoStudyLogo link />, a comprehensive study buddy web application in React with features including{" "}
-              <strong>study timer</strong>, <strong>to-do list</strong>, <strong>note-taking</strong>, and{" "}
+              experience in developing applications of their choice. I worked alongside my friend to create{' '}
+              <TodoStudyLogo link />, a comprehensive study buddy web application in React with features including{' '}
+              <strong>study timer</strong>, <strong>to-do list</strong>, <strong>note-taking</strong>, and{' '}
               <strong>Canvas LMS downloader</strong>. We managed to achieve an Apollo 11 (advanced) achievement level
               for the project.
             </p>
@@ -237,7 +237,7 @@ function AwardsMainBody({ screenWidth }: { screenWidth: number }) {
             <p className="justify lastp">
               An honourable mention from my JC as an inspirational story for future students, published as an article on
               the school website. Citation: "From not uttering a single word to others, I became a more confident
-              communicator since enrolling in JC". Full article{" "}
+              communicator since enrolling in JC". Full article{' '}
               <a
                 rel="noopener noreferrer"
                 target="_blank"
@@ -278,15 +278,15 @@ function AwardsMainBody({ screenWidth }: { screenWidth: number }) {
             </p>
             <ol className="justify">
               <li>
-                <strong>Australian Mathematics Competition (AMC 2011) Junior Division (Aug 2011):</strong> Achieved the{" "}
+                <strong>Australian Mathematics Competition (AMC 2011) Junior Division (Aug 2011):</strong> Achieved the{' '}
                 <strong>Prudence Award</strong> for answering the most consecutive number of questions correctly for
-                each participating school. I represented my primary school and got the first <strong>21</strong>{" "}
+                each participating school. I represented my primary school and got the first <strong>21</strong>{' '}
                 consecutive questions out of 30 correct.
               </li>
               <li>
                 <strong>
                   Singapore &amp; ASEAN Schools Maths Olympiad (SASMO 2011) Primary 3 &amp; 4 Division (2011):
-                </strong>{" "}
+                </strong>{' '}
                 Attained a <strong>Gold Medal</strong>. I represented my primary school for this competition.
               </li>
               <li>
@@ -313,7 +313,7 @@ function AwardsMainBody({ screenWidth }: { screenWidth: number }) {
 export default function Awards() {
   const screenWidth = useWindowParams(true, false)[0];
 
-  document.title = "Awards | Brendan Koh";
+  document.title = 'Awards | Brendan Koh';
 
   return (
     <div className="container-wrap">

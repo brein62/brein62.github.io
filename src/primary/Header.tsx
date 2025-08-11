@@ -1,5 +1,5 @@
-import EmailTeleDisplay from "../components/base/EmailTeleDisplay";
-import { useWindowParams } from "../hooks/useWindowParams";
+import EmailTeleDisplay from '../components/base/EmailTeleDisplay';
+import { useWindowParams } from '../hooks/useWindowParams';
 
 /**
  * Returns the component to be displayed as the header in all pages.

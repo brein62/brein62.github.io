@@ -1,5 +1,5 @@
-import { Badge, Col, Nav, Row, Tab, Table } from "react-bootstrap";
-import TodoStudyLogo from "../logos/TodoStudyLogo";
+import { Badge, Col, Nav, Row, Tab, Table } from 'react-bootstrap';
+import TodoStudyLogo from '../logos/TodoStudyLogo';
 
 /**
  * Returns a badge indicating S/U option has been exercised.
@@ -10,7 +10,7 @@ import TodoStudyLogo from "../logos/TodoStudyLogo";
  */
 export function SuBadge({ nomargin = false }: { nomargin?: boolean }) {
   return (
-    <Badge style={!nomargin ? { marginLeft: "0.3em" } : {}} bg="secondary">
+    <Badge style={!nomargin ? { marginLeft: '0.3em' } : {}} bg="secondary">
       S/U option exercised
     </Badge>
   );
@@ -23,7 +23,7 @@ export function SuBadge({ nomargin = false }: { nomargin?: boolean }) {
  */
 export function TbcBadge() {
   return (
-    <Badge style={{ marginLeft: "0.3em" }} bg="secondary">
+    <Badge style={{ marginLeft: '0.3em' }} bg="secondary">
       To be confirmed
     </Badge>
   );
@@ -36,7 +36,7 @@ export function TbcBadge() {
  */
 function CsCuBadge() {
   return (
-    <Badge style={{ marginLeft: "0.3em" }} bg="success">
+    <Badge style={{ marginLeft: '0.3em' }} bg="success">
       Pass/fail module (passed)
     </Badge>
   );
@@ -51,8 +51,8 @@ function CsCuBadge() {
  */
 function UnitsBadge({ units = 4 }: { units?: number }) {
   return (
-    <Badge style={{ marginLeft: "0.3em" }} bg="primary">
-      {units} unit{units !== 1 ? "s" : ""}
+    <Badge style={{ marginLeft: '0.3em' }} bg="primary">
+      {units} unit{units !== 1 ? 's' : ''}
     </Badge>
   );
 }
@@ -70,12 +70,12 @@ function UnitsBadge({ units = 4 }: { units?: number }) {
 export function TopBadge({ nolink = false, nomargin = false }: { nolink?: boolean; nomargin?: boolean }) {
   return !nolink ? (
     <a href="/#awards#academic-achievements">
-      <Badge style={!nomargin ? { marginLeft: "0.3em" } : {}} bg="warning">
+      <Badge style={!nomargin ? { marginLeft: '0.3em' } : {}} bg="warning">
         Top Performer Award
       </Badge>
     </a>
   ) : (
-    <Badge style={!nomargin ? { marginLeft: "0.3em" } : {}} bg="warning">
+    <Badge style={!nomargin ? { marginLeft: '0.3em' } : {}} bg="warning">
       Top Performer Award
     </Badge>
   );
@@ -105,12 +105,12 @@ export function ProjectBadge({
 }) {
   return !nolink ? (
     <a href={href}>
-      <Badge style={!nomargin ? { marginLeft: "0.3em" } : {}} bg="danger">
+      <Badge style={!nomargin ? { marginLeft: '0.3em' } : {}} bg="danger">
         {name ? <>Project ({name})</> : <>Project</>}
       </Badge>
     </a>
   ) : (
-    <Badge style={!nomargin ? { marginLeft: "0.3em" } : {}} bg="danger">
+    <Badge style={!nomargin ? { marginLeft: '0.3em' } : {}} bg="danger">
       {name ? <>Project ({name})</> : <>Project</>}
     </Badge>
   );
@@ -172,10 +172,10 @@ function GradeEntry({ course, grade, children }: { course: string; grade: string
       <td>
         <strong style={{ fontWeight: 600 }}>{course}</strong>
       </td>
-      <td>{grade === "" ? <i>TBA</i> : grade}</td>
+      <td>{grade === '' ? <i>TBA</i> : grade}</td>
       <td>
         {/* column for badges */}
-        <div style={{ marginLeft: "-0.3em" }}>{children}</div>
+        <div style={{ marginLeft: '-0.3em' }}>{children}</div>
       </td>
     </tr>
   );
@@ -188,7 +188,7 @@ function GradeEntry({ course, grade, children }: { course: string; grade: string
  */
 export default function UniGradesTab() {
   return (
-    <div style={{ border: "1px dashed", borderRadius: "10px", padding: "0.5em" }}>
+    <div style={{ border: '1px dashed', borderRadius: '10px', padding: '0.5em' }}>
       <Tab.Container id="left-tabs-example" defaultActiveKey="Y3S2">
         <Row>
           <Col sm={3}>
@@ -307,8 +307,8 @@ export default function UniGradesTab() {
                     <UnitsBadge />
                     <CsCuBadge />
                     <ProjectBadge name={<TodoStudyLogo green={false} />} href="/#projects#school-projects" />
-                    <div style={{ marginLeft: "0.3em" }}>
-                      <small className="text-muted" style={{ fontSize: "0.8rem" }}>
+                    <div style={{ marginLeft: '0.3em' }}>
+                      <small className="text-muted" style={{ fontSize: '0.8rem' }}>
                         Attained Apollo 11 (Advanced) achievement level. Done over Y1 summer.
                       </small>
                     </div>
