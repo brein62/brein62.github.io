@@ -210,3 +210,24 @@ hr.minor {
 .moreinfo:hover {
   cursor: pointer; /* Change cursor to pointer on hover */
 }
+
+.course-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.uni-grades-nav hr {
+  height: 1px;
+  width: 90% !important;
+  margin: 0 auto !important;
+  border: 5px !important;
+  background-color: transparent !important;
+  background-image: linear-gradient(
+    to right,
+    rgba(13, 110, 253, 0),
+    rgba(13, 110, 253, 0.75),
+    rgba(13, 110, 253, 1),
+    rgba(13, 110, 253, 0.75),
+    rgba(13, 110, 253, 0)
+  ) !important;
+}

@@ -170,7 +170,14 @@ function GradeEntry({ course, grade, children }: { course: string; grade: string
   return (
     <tr>
       <td>
-        <strong style={{ fontWeight: 600 }}>{course}</strong>
+        <a
+          className="course-link"
+          rel="noopener noreferrer"
+          target="_blank"
+          href={`https://nusmods.com/courses/${course.split(' ')[0]}`}
+        >
+          <strong style={{ fontWeight: 600 }}>{course}</strong>
+        </a>
       </td>
       <td>{grade === '' ? <i>TBA</i> : grade}</td>
       <td>
@@ -178,6 +185,15 @@ function GradeEntry({ course, grade, children }: { course: string; grade: string
         <div style={{ marginLeft: '-0.3em' }}>{children}</div>
       </td>
     </tr>
+  );
+}
+
+function TotalUnits({ units }: { units: number }) {
+  return (
+    <p>
+      <strong>Total units: </strong>
+      <span style={{ fontWeight: 600 }}>{units}</span>
+    </p>
   );
 }
 
@@ -189,40 +205,46 @@ function GradeEntry({ course, grade, children }: { course: string; grade: string
 export default function UniGradesTab() {
   return (
     <div style={{ border: '1px dashed', borderRadius: '10px', padding: '0.5em' }}>
-      <Tab.Container id="left-tabs-example" defaultActiveKey="Y3S2">
+      <Tab.Container id="left-tabs-example" defaultActiveKey="Y4S1">
         <Row>
           <Col sm={3}>
-            <Nav variant="pills" className="flex-column">
+            <Nav variant="pills" className="flex-column uni-grades-nav">
               <Nav.Item>
                 <Nav.Link eventKey="Y1S1">
                   <span title="Year 1 Semester 1 (Academic Year 2022/23)">Y1S1 (Aug &ndash; Dec 2022)</span>
                 </Nav.Link>
               </Nav.Item>
+              <hr />
               <Nav.Item>
                 <Nav.Link eventKey="Y1S2">
                   <span title="Year 1 Semester 2 (Academic Year 2022/23)">Y1S2 (Jan &ndash; May 2023)</span>
                 </Nav.Link>
               </Nav.Item>
+              <hr />
               <Nav.Item>
                 <Nav.Link eventKey="Y2S1">
                   <span title="Year 2 Semester 1 (Academic Year 2023/24)">Y2S1 (Aug &ndash; Dec 2023)</span>
                 </Nav.Link>
               </Nav.Item>
+              <hr />
               <Nav.Item>
                 <Nav.Link eventKey="Y2S2">
                   <span title="Year 2 Semester 2 (Academic Year 2023/24)">Y2S2 (Jan &ndash; May 2024)</span>
                 </Nav.Link>
               </Nav.Item>
+              <hr />
               <Nav.Item>
                 <Nav.Link eventKey="Y3S1">
                   <span title="Year 3 Semester 1 (Academic Year 2024/25)">Y3S1 (Aug &ndash; Dec 2024)</span>
                 </Nav.Link>
               </Nav.Item>
+              <hr />
               <Nav.Item>
                 <Nav.Link eventKey="Y3S2">
                   <span title="Year 3 Semester 2 (Academic Year 2024/25)">Y3S2 (Jan &ndash; May 2025)</span>
                 </Nav.Link>
               </Nav.Item>
+              <hr />
               <Nav.Item>
                 <Nav.Link eventKey="Y3ST">
                   <span title="Year 3 Special Term (Academic Year 2024/25)">
@@ -230,11 +252,24 @@ export default function UniGradesTab() {
                   </span>
                 </Nav.Link>
               </Nav.Item>
+              <hr />
+              <Nav.Item>
+                <Nav.Link eventKey="Y4S1">
+                  <span title="Year 4 Semester 1 (Academic Year 2025/26)">Y4S1 (Aug &ndash; Dec 2025)</span>
+                </Nav.Link>
+              </Nav.Item>
+              <hr />
+              <Nav.Item>
+                <Nav.Link eventKey="Y4S2">
+                  <span title="Year 4 Semester 2 (Academic Year 2025/26)">(Future) Y4S2 (Jan &ndash; May 2026)</span>
+                </Nav.Link>
+              </Nav.Item>
             </Nav>
           </Col>
           <Col sm={9} id="tab-modules">
             <Tab.Content>
               <Tab.Pane eventKey="Y1S1">
+                <TotalUnits units={22} />
                 <GradeTable>
                   <GradeEntry course="CS1101S Programming Metholodogy" grade="A">
                     <UnitsBadge />
@@ -260,6 +295,7 @@ export default function UniGradesTab() {
                 </GradeTable>
               </Tab.Pane>
               <Tab.Pane eventKey="Y1S2">
+                <TotalUnits units={21} />
                 <GradeTable>
                   <GradeEntry course="CS2030S Programming Metholodogy II" grade="A+">
                     <UnitsBadge />
@@ -284,6 +320,7 @@ export default function UniGradesTab() {
                 </GradeTable>
               </Tab.Pane>
               <Tab.Pane eventKey="Y2S1">
+                <TotalUnits units={24} />
                 <GradeTable>
                   <GradeEntry course="CS2100 Computer Organisation" grade="A+">
                     <UnitsBadge />
@@ -316,6 +353,7 @@ export default function UniGradesTab() {
                 </GradeTable>
               </Tab.Pane>
               <Tab.Pane eventKey="Y2S2">
+                <TotalUnits units={22} />
                 <p>
                   <strong>Award: </strong>
                   <span style={{ fontWeight: 600 }}>
@@ -349,6 +387,7 @@ export default function UniGradesTab() {
                 </GradeTable>
               </Tab.Pane>
               <Tab.Pane eventKey="Y3S1">
+                <TotalUnits units={24} />
                 <GradeTable>
                   <GradeEntry course="CS3219 Software Engineering Principles and Patterns" grade="A-">
                     <UnitsBadge />
@@ -378,6 +417,7 @@ export default function UniGradesTab() {
                 </GradeTable>
               </Tab.Pane>
               <Tab.Pane eventKey="Y3S2">
+                <TotalUnits units={20} />
                 <p>
                   <strong>Award: </strong>
                   <span style={{ fontWeight: 600 }}>
@@ -405,10 +445,55 @@ export default function UniGradesTab() {
                 </GradeTable>
               </Tab.Pane>
               <Tab.Pane eventKey="Y3ST">
+                <TotalUnits units={6} />
                 <GradeTable>
                   <GradeEntry course="CP3200 Internship" grade="">
                     <UnitsBadge units={6} />
                     {/*<CsCuBadge />*/}
+                  </GradeEntry>
+                </GradeTable>
+              </Tab.Pane>
+              <Tab.Pane eventKey="Y4S1">
+                <TotalUnits units={22} />
+                <GradeTable>
+                  <GradeEntry course="CS4243 Computer Vision and Pattern Recognition" grade="">
+                    <UnitsBadge />
+                  </GradeEntry>
+                  <GradeEntry course="CS4218 Software Testing" grade="">
+                    <UnitsBadge />
+                  </GradeEntry>
+                  <GradeEntry course="CS3223 Database Systems Implementation" grade="">
+                    <UnitsBadge />
+                  </GradeEntry>
+                  <GradeEntry course="EC3303 Econometrics I" grade="">
+                    <UnitsBadge />
+                  </GradeEntry>
+                  <GradeEntry course="GEC1015 Public Health in Action" grade="">
+                    <UnitsBadge />
+                  </GradeEntry>
+                  <GradeEntry course="GEN2050X Teach SG" grade="">
+                    <UnitsBadge units={2} />
+                    <div style={{ marginLeft: '0.3em' }}>
+                      <small className="text-muted" style={{ fontSize: '0.8rem' }}>
+                        2-semester module, taken over Y4S1 and Y4S2.
+                      </small>
+                    </div>
+                  </GradeEntry>
+                </GradeTable>
+              </Tab.Pane>
+              <Tab.Pane eventKey="Y4S2">
+                <TotalUnits units={6} />
+                <GradeTable>
+                  <GradeEntry course="CS4248 Natural Language Processing" grade="">
+                    <UnitsBadge />
+                  </GradeEntry>
+                  <GradeEntry course="GEN2050X Teach SG" grade="">
+                    <UnitsBadge units={2} />
+                    <div style={{ marginLeft: '0.3em' }}>
+                      <small className="text-muted" style={{ fontSize: '0.8rem' }}>
+                        2-semester module, taken over Y4S1 and Y4S2.
+                      </small>
+                    </div>
                   </GradeEntry>
                 </GradeTable>
               </Tab.Pane>

@@ -67,6 +67,7 @@ function ExperienceMainBody({ screenWidth }: { screenWidth: number }) {
                     <ProjectBadge nomargin nolink name="" href="#" /> badges, click on the respective badge to find out
                     about the projects and awards I have received for these modules!
                   </p>
+                  <p className="justify">Click on the module code to view the module's page on NUSMods.</p>
                   <UniGradesTab />
                 </Accordion.Body>
               </Accordion.Item>
