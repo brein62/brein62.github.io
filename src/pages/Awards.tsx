@@ -29,7 +29,7 @@ function AwardsMainBody({ screenWidth }: { screenWidth: number }) {
 
   return (
     <article>
-      <PageSection title="Awards">
+      <PageSection title="Awards" id="awards-intro">
         <p className="big justify">
           I have joined a lot of competitions, both in Computer Science and non-Computer Science, as well as earned
           awards for academic achievement. I have joined many competitions in different Computing sub-disciplines, such

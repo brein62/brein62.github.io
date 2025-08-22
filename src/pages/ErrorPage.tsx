@@ -22,12 +22,14 @@ export default function ErrorPage({ error, errorDesc }: { error: string; errorDe
   return (
     <div className="container-wrap">
       <Navigation selectedPage="Error" screenWidth={screenWidth} />
-      <Container className="container container-inner container-xs error-wrap" style={{ padding: '1em' }}>
-        <h1>{error} :(</h1>
-        <p className="big">{errorDesc}</p>
-        <p className="big">
-          Return to the main page <a href="/">here</a>.
-        </p>
+      <Container className="container container-inner container-xs error-wrap">
+        <div className="p-3">
+          <h1>{error} :(</h1>
+          <p className="big">{errorDesc}</p>
+          <p className="big">
+            Return to the main page <a href="/">here</a>.
+          </p>
+        </div>
       </Container>
     </div>
   );

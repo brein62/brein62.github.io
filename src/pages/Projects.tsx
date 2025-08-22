@@ -28,7 +28,7 @@ function ProjectsMainBody({ screenWidth }: { screenWidth: number }) {
 
   return (
     <article>
-      <PageSection title="Projects">
+      <PageSection title="Projects" id="projects-intro">
         <p className="big justify">
           Here is a list of projects I have done, ranging from simple ones to facilitate my learning to more advanced
           ones in a variety of programming languages and forms. Most of my project ideas are usually inspired from

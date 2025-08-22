@@ -15,11 +15,12 @@ export default function PageSection({
   title,
   description = '',
   children,
-}: PropsWithChildren<{ title: string; description?: string }>) {
+  id = toKebabCase(title),
+}: PropsWithChildren<{ title: string; description?: string; id?: string }>) {
   return (
     <section>
       <Container>
-        <h3 id={toKebabCase(title)}>{title}</h3>
+        <h3 id={id}>{title}</h3>
         {description !== '' ? <p className="textcenter">{description}</p> : <></>}
         <div style={{ textAlign: 'left' }}>{children}</div>
       </Container>
