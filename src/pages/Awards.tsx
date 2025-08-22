@@ -14,6 +14,7 @@ import { faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
 import LinkButton from '../components/buttons/LinkButton';
 import { AnchorScroll } from '../utils/AnchorScroll';
 import ResumeDivider from '../components/base/side-pages/ResumeDivider';
+import Navigation from '../components/base/Navigation';
 
 /**
  * Returns the main body of the Awards page, given the following props:
@@ -317,6 +318,7 @@ export default function Awards() {
 
   return (
     <div className="container-wrap">
+      <Navigation selectedPage="Awards" screenWidth={screenWidth} />
       <Container className="container container-inner container-sm">
         <Header />
         <AwardsMainBody screenWidth={screenWidth} />

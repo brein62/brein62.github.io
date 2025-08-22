@@ -19,6 +19,7 @@
   opacity: 1;
   box-shadow: 0 60px 80px 0 rgba(0, 0, 0, 0.3);
   padding: 0 !important;
+  margin-top: 4em !important;
 }
 
 header,
@@ -42,6 +43,108 @@ footer {
   background-color: #2e2e2e;
   color: #e0e0e0;
   font-size: 0.85em;
+}
+
+nav,
+nav a {
+  background-color: #2e2e2e;
+  color: #e0e0e0;
+}
+
+nav {
+  position: relative;
+  z-index: 1002;
+}
+
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 1em 2em rgba(0, 0, 0, 0.5);
+  height: 4em;
+  max-height: 4em;
+}
+
+.nav-mobile-links {
+  position: absolute;
+  top: 4em;
+  left: 0;
+  width: 100%;
+  background-color: #353535;
+  padding: 1em;
+  box-shadow: 0 1em 2em rgba(0, 0, 0, 0.5);
+}
+
+.nav-mobile-link {
+  padding: 0.5em 1em;
+  border: 1px solid #f0f0f003;
+}
+
+.nav-selected {
+  color: #f0f0f0;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-unselected {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.nav-unselected:hover {
+  color: #f0f0f0;
+  text-decoration: none;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5); /* translucent dark */
+  z-index: 999;
+  display: none; /* default hidden */
+}
+
+.menu-overlay.active {
+  z-index: 999;
+  display: block;
+}
+
+.hamburger-button {
+  width: 3em;
+  height: 2.4em;
+  background-color: #444 !important;
+  border: 1px solid #777 !important;
+  color: #f0f0f0 !important;
+  font-size: 1.5em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.hamburger-button:hover {
+  background-color: #555 !important;
+  border-color: #888 !important;
+}
+
+/* Initial hidden state */
+#navbarSupportedContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+/* When open — add this class via JS */
+#navbarSupportedContent.open {
+  max-height: 500px; /* or however tall your menu gets */
+  opacity: 1;
+}
+
+#navbarSupportedContent ul {
+  z-index: 1001;
 }
 
 footer p {
@@ -230,4 +333,8 @@ hr.minor {
     rgba(13, 110, 253, 0.75),
     rgba(13, 110, 253, 0)
   ) !important;
+}
+
+nav li {
+  list-style-type: none;
 }

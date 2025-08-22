@@ -12,6 +12,7 @@ import Timeline from '../components/base/timeline/Timeline';
 import TimelineEntry from '../components/base/timeline/TimelineEntry';
 import { useEffect } from 'react';
 import { AnchorScroll } from '../utils/AnchorScroll';
+import Navigation from '../components/base/Navigation';
 
 /**
  * @returns My age, calculated from my birth date.
@@ -274,6 +275,7 @@ export default function Personal() {
 
   return (
     <div className="container-wrap">
+      <Navigation selectedPage="Personal" screenWidth={screenWidth} />
       <Container className="container container-inner container-sm">
         <Header />
         <PersonalMainBody screenWidth={screenWidth} />

@@ -11,6 +11,7 @@ import HomePageButton from '../components/buttons/HomePageButton';
 import { useWindowParams } from '../hooks/useWindowParams';
 import { AnchorScroll } from '../utils/AnchorScroll';
 import { useEffect } from 'react';
+import Navigation from '../components/base/Navigation';
 
 /**
  * Returns the main body of the Experience page, given the following props:
@@ -209,6 +210,7 @@ export default function Experience() {
 
   return (
     <div className="container-wrap">
+      <Navigation selectedPage="Experience" screenWidth={screenWidth} />
       <Container className="container container-inner container-sm">
         <Header />
         <ExperienceMainBody screenWidth={screenWidth} />

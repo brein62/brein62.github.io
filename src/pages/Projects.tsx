@@ -13,6 +13,7 @@ import { useEffect } from 'react';
 import LinkButton from '../components/buttons/LinkButton';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { AnchorScroll } from '../utils/AnchorScroll';
+import Navigation from '../components/base/Navigation';
 
 /**
  * Returns the main body of the Projects page, given the following props:
@@ -484,6 +485,7 @@ export default function Projects() {
 
   return (
     <div className="container-wrap">
+      <Navigation selectedPage="Projects" screenWidth={screenWidth} />
       <Container className="container container-inner container-sm">
         <Header />
         <ProjectsMainBody screenWidth={screenWidth} />

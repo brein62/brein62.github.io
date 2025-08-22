@@ -14,6 +14,7 @@ import EventInfo from '../components/base/side-pages/EventInfo';
 import EventList from '../components/base/side-pages/EventList';
 import { AnchorScroll } from '../utils/AnchorScroll';
 import LinkToAwardButton from '../components/buttons/LinkToAwardButton';
+import Navigation from '../components/base/Navigation';
 
 /**
  * Returns the main body of the Volunteering page, given the following props:
@@ -202,6 +203,7 @@ export default function Volunteering() {
 
   return (
     <div className="container-wrap">
+      <Navigation selectedPage="Volunteering" screenWidth={screenWidth} />
       <Container className="container container-inner container-sm">
         <Header />
         <VolunteeringMainBody screenWidth={screenWidth} />
