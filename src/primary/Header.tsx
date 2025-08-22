@@ -11,7 +11,11 @@ export default function Header() {
   return (
     <header>
       <h1>Brendan Koh</h1>
-      <p className="big desc">Year 4 Computer Science Student, NUS School of Computing</p>
+      <p className="desc">
+        <span className="big">Full-Stack Software Engineer</span>
+        <br />
+        <span>Final-Year Computer Science Student, NUS School of Computing</span>
+      </p>
       <EmailTeleDisplay screenWidth={screenWidth} />
     </header>
   );

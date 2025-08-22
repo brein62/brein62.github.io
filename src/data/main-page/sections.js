@@ -10,7 +10,7 @@ const sections = {
       img: ['/personal/me-eating.jpg', '/personal/me-skiing.jpg'],
       href: '/#experience',
       content:
-        'I am currently a Year 4 undergraduate studying Computer Science at the <a href="https://www.comp.nus.edu.sg/">School of Computing, National University of Singapore (NUS)</a>. I am proficient in many programming languages including Python, C++, HTML/CSS/JavaScript and Java and have done several software engineering projects in the past. I have had many years of experience programming as a hobby beforehand.',
+        'I am currently a final-year undergraduate studying Computer Science at the <a href="https://www.comp.nus.edu.sg/">School of Computing, National University of Singapore (NUS)</a>. I am proficient in many programming languages including Python, C++, HTML/CSS/JavaScript and Java and have done several software engineering projects in the past. I have had many years of experience programming as a hobby beforehand.',
     },
     {
       title: 'Projects',
