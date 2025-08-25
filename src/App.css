@@ -340,3 +340,13 @@ hr.minor {
 nav li {
   list-style-type: none;
 }
+
+details[open] ul {
+  max-height: 5200px; /* enough to fit content */
+  transition: max-height 1s ease-in-out;
+}
+details ul {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-in-out;
+}

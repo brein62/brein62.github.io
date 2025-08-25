@@ -12,6 +12,9 @@ import { useWindowParams } from '../hooks/useWindowParams';
 import { AnchorScroll } from '../utils/AnchorScroll';
 import { useEffect } from 'react';
 import Navigation from '../components/base/Navigation';
+import ResumeAccordion from '../components/base/side-pages/ResumeAccordion';
+import LinkButton from '../components/buttons/LinkButton';
+import { faArrowUpRightFromSquare, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 
 /**
  * Returns the main body of the Experience page, given the following props:
@@ -104,6 +107,86 @@ function ExperienceMainBody({ screenWidth }: { screenWidth: number }) {
       <PageSection title="Work &amp; Internship Experience">
         <ResumeList>
           <ResumeEntry
+            title="Bitopia Technology Pte Ltd"
+            subtitle="Software Developer/Engineer (Internship)"
+            dates="May 2025 &ndash; Aug 2025"
+            screenWidth={screenWidth}
+          >
+            <p className="justify">
+              A full-stack web development role I did in Year 3 Summer as part of the{' '}
+              <em>Student Internship Programme (SIP)</em> in NUS, with primary focus on backend development using Java
+              Spring Boot. The scope was separate from my previous part-time role at Bitopia, as I focused on building
+              reusable asynchronous AI infrastructure for enterprise applications. Over the 11 weeks, I gained
+              experience in reusable system design and architecture, technical documentation, and several technologies
+              including <strong>RabbitMQ</strong>, <strong>Prometheus/Grafana</strong>, and{' '}
+              <strong>Tesseract OCR</strong>.
+            </p>
+            <p className="justify">
+              This internship involved a <strong>private sector project</strong> where I worked on creation of reusable
+              AI SDK microservices, as well as reliable message queue architectures in RabbitMQ through retry and
+              dead-letter queues (DLQs), with focus on traceability and observability of messages through Prometheus and
+              Grafana. In the last two weeks of my internship, I also worked on a small AI document processing feature
+              using Tesseract OCR and LLMs.
+            </p>
+            <p className="justify">
+              I also did AI research, exploring computer vision, regression, classification, time-series forecasting,
+              and clustering tasks in enterprise contexts, and designed architecture to connect the Python AI
+              microservices to Java Spring Boot and business intelligence contexts for a{' '}
+              <strong>public sector project</strong>.
+            </p>
+            <div className="d-flex flex-wrap gap-2 mb-3">
+              <LinkButton
+                direction="left"
+                href="/documents/Brendan-Koh-SIP-Final-Project-Report.pdf"
+                icon={faFilePdf}
+                variant="danger"
+              >
+                Final Project Report
+              </LinkButton>
+              <LinkButton direction="left" href="https://www.bitopiatech.com/" icon={faArrowUpRightFromSquare}>
+                Bitopia Technology
+              </LinkButton>
+            </div>
+            <ResumeAccordion>
+              <ul>
+                <li>
+                  Built a reusable AI SDK microservice with Spring Boot and Vue with API and GUI for testing multiple
+                  large language models (LLMs) (OpenAI, Google Gemini, Anthropic Claude) with cost and token
+                  information, allowing for informed cost-benefit analysis of different AI models.{' '}
+                </li>
+                <li>
+                  Designed and architected a reusable, reliable, and fault-tolerant RabbitMQ architecture utilising
+                  retry/dead-letter queues with Prometheus/Grafana observability, ensuring message persistence in
+                  production and preventing loss in business revenue across 5+ applications.
+                </li>
+                <li>
+                  Developed an asynchronous AI image processing workflow for an enterprise application using the
+                  RabbitMQ reliability architecture, speeding up image processing by 4 times while ensuring fault
+                  tolerance and traceability.
+                </li>
+                <li>
+                  Engineered and managed 3 containerised microservices (RabbitMQ, Grafana, Prometheus) for the RabbitMQ
+                  reliability architecture implementation in the enterprise application, leveraging Docker Compose for
+                  easy deployment and scaling.
+                </li>
+                <li>
+                  Implemented a document processing feature using Tesseract OCR and LLMs for structured data extraction
+                  within private sector enterprise project, saving processing time by 90%.
+                </li>
+                <li>
+                  Architected systems to integrate Python ML APIs with Spring Boot and business intelligence tools,
+                  while conducting ML research for enterprise and public sector use cases (regression, classification,
+                  time-series, clustering).
+                </li>
+                <li>
+                  Authored technical documentation (JavaDoc, READMEs, architecture diagrams) to address critical gaps in
+                  system knowledge, supporting long-term maintainability and knowledge transfer within the team, while
+                  also reducing handover time by 60%.
+                </li>
+              </ul>
+            </ResumeAccordion>
+          </ResumeEntry>
+          <ResumeEntry
             title="Oceanus Group Limited"
             subtitle="Software Development Intern, Oceanus Innoventure"
             dates="Jul 2024 &ndash; Aug 2024"
@@ -117,6 +200,18 @@ function ExperienceMainBody({ screenWidth }: { screenWidth: number }) {
               OpenAI's API, over the span of only 6 weeks. These vital web development skills have proved useful in
               subsequent projects, such as <a href="#projects#school-projects">PeerPrep</a>.
             </p>
+            <ResumeAccordion>
+              <ul>
+                <li>
+                  Planned, designed and developed a full-stack AI-powered web application prototype in React and Django
+                  frameworks from the ground up used by traders within the company.
+                </li>
+                <li>
+                  Acquired considerable expertise in full-stack application development, particularly in generative
+                  AI-powered applications and prompt engineering using OpenAI's API over 6 weeks.
+                </li>
+              </ul>
+            </ResumeAccordion>
           </ResumeEntry>
           <ResumeEntry
             title="Bitopia Technology Pte Ltd"
@@ -131,6 +226,18 @@ function ExperienceMainBody({ screenWidth }: { screenWidth: number }) {
               the projects (including implementing algorithms for frontend validation of form fields) and had experience
               in creating backend classes in Spring Boot using the Model-View-Controller (MVC) pattern.
             </p>
+            <ResumeAccordion>
+              <ul>
+                <li>
+                  Developed several backend models and classes in Spring Boot vital for applications, catering to
+                  clients' requirements.
+                </li>
+                <li>
+                  Gained significant experience in backend web development using Spring Boot, as well as knowledge on
+                  how frontend and backend in web applications are integrated.
+                </li>
+              </ul>
+            </ResumeAccordion>
           </ResumeEntry>
           <ResumeEntry
             title="School of Computer Science and Engineering, Nanyang Technological University"
