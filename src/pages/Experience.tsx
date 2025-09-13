@@ -207,6 +207,15 @@ function ExperienceMainBody({ screenWidth }: { screenWidth: number }) {
                   frameworks from the ground up used by traders within the company.
                 </li>
                 <li>
+                  Drafted a Business Requirements Document (BRD) from scratch for the web application, capturing project
+                  scope, deliverables, workflows for traders and long-term business costs, aligning technical design
+                  with business impact.
+                </li>
+                <li>
+                  Partnered with traders through multiple product demonstrations throughout the 5-week development
+                  process, gathering feedback on usability and requirements to refine the product roadmap.
+                </li>
+                <li>
                   Acquired considerable expertise in full-stack application development, particularly in generative
                   AI-powered applications and prompt engineering using OpenAI's API over 6 weeks.
                 </li>

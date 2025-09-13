@@ -447,9 +447,9 @@ export default function UniGradesTab() {
               <Tab.Pane eventKey="Y3ST">
                 <TotalUnits units={6} />
                 <GradeTable>
-                  <GradeEntry course="CP3200 Internship" grade="">
+                  <GradeEntry course="CP3200 Internship" grade="CS">
                     <UnitsBadge units={6} />
-                    {/*<CsCuBadge />*/}
+                    <CsCuBadge />
                   </GradeEntry>
                 </GradeTable>
               </Tab.Pane>

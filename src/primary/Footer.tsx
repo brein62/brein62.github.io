@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import EmailAccount from '../components/base/EmailAccount';
 
 /**
  * Returns the component to be displayed as the footer in all pages.
@@ -15,7 +16,9 @@ export default function Footer() {
       <p>
         <strong>Contact details:</strong>
       </p>
-      <p>Email: e0958078@u.nus.edu</p>
+      <p>
+        Email: <EmailAccount />
+      </p>
       <p>
         Telegram handle:{' '}
         <a className="link-light" href="https://t.me/brein62">
