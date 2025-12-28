@@ -190,6 +190,38 @@ function PersonalMainBody({ screenWidth }: { screenWidth: number }) {
               and table tennis recreationally, but I am generally not as skilled in these sports. I am always open to
               learning new sports, especially if they are individual/pair sports.
             </p>
+            {/*
+            <p className="justify">
+              I go to the gym around 4 to 5 times a week for weight training, and integrate some running into some of my
+              workouts as well.
+            </p>
+            <Container
+              style={{
+                textAlign: 'center',
+                borderRadius: '1em',
+                border: '1px dashed',
+                marginTop: '1em',
+              }}
+            >
+              <RowLayout screenWidth={screenWidth}>
+                <Col style={{ padding: '0.5em 0' }}>
+                  <strong>Bench Press</strong>:<br />
+                  <span className="big">100kg 1RM</span>
+                </Col>
+                <Col style={{ padding: '0.5em 0' }}>
+                  <strong>Incline Bench Press</strong>:<br />
+                  <span className="big">80kg for 7 reps</span>
+                </Col>
+                <Col style={{ padding: '0.5em 0' }}>
+                  <strong>Squat</strong>:<br />
+                  <span className="big">90kg for 10 reps</span>
+                </Col>
+                <Col style={{ padding: '0.5em 0' }}>
+                  <strong>Leg Press</strong>:<br />
+                  <span className="big">235kg for 10 reps</span>
+                </Col>
+              </RowLayout>
+            </Container>*/}
           </ResumeEntry>
           <ResumeEntry title="Video games" dates="" screenWidth={screenWidth}>
             <p className="justify">
