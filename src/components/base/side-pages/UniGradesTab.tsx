@@ -456,26 +456,26 @@ export default function UniGradesTab() {
               <Tab.Pane eventKey="Y4S1">
                 <TotalUnits units={22} />
                 <GradeTable>
-                  <GradeEntry course="CS4243 Computer Vision and Pattern Recognition" grade="">
+                  <GradeEntry course="CS4243 Computer Vision and Pattern Recognition" grade="A">
                     <UnitsBadge />
                   </GradeEntry>
-                  <GradeEntry course="CS4218 Software Testing" grade="">
+                  <GradeEntry course="CS4218 Software Testing" grade="A+">
                     <UnitsBadge />
                   </GradeEntry>
-                  <GradeEntry course="CS3223 Database Systems Implementation" grade="">
+                  <GradeEntry course="CS3223 Database Systems Implementation" grade="A">
                     <UnitsBadge />
                   </GradeEntry>
-                  <GradeEntry course="EC3303 Econometrics I" grade="">
+                  <GradeEntry course="EC3303 Econometrics I" grade="A+">
                     <UnitsBadge />
                   </GradeEntry>
-                  <GradeEntry course="GEC1015 Public Health in Action" grade="">
+                  <GradeEntry course="GEC1015 Public Health in Action" grade="A+">
                     <UnitsBadge />
                   </GradeEntry>
-                  <GradeEntry course="GEN2050X Teach SG" grade="">
+                  <GradeEntry course="GEN2050X Teach SG" grade="IP">
                     <UnitsBadge units={2} />
                     <div style={{ marginLeft: '0.3em' }}>
                       <small className="text-muted" style={{ fontSize: '0.8rem' }}>
-                        2-semester module, taken over Y4S1 and Y4S2.
+                        2-semester module, taken over Y4S1 and Y4S2. IP grade (in progress) as of end Y4S1.
                       </small>
                     </div>
                   </GradeEntry>

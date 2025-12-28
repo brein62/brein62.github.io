@@ -51,7 +51,7 @@ function ExperienceMainBody({ screenWidth }: { screenWidth: number }) {
             <ul>
               <li>Minor in Economics</li>
               <li>
-                <strong>GPA: </strong>4.86/5 (as of Jun 2025)
+                <strong>GPA: </strong>4.88/5 (as of Dec 2025)
               </li>
               <li>
                 <strong>Expected Graduation Year: </strong>2026
