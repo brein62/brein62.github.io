@@ -205,7 +205,7 @@ function TotalUnits({ units }: { units: number }) {
 export default function UniGradesTab() {
   return (
     <div style={{ border: '1px dashed', borderRadius: '10px', padding: '0.5em' }}>
-      <Tab.Container id="left-tabs-example" defaultActiveKey="Y4S1">
+      <Tab.Container id="left-tabs-example" defaultActiveKey="Y4S2">
         <Row>
           <Col sm={3}>
             <Nav variant="pills" className="flex-column uni-grades-nav">
@@ -261,7 +261,7 @@ export default function UniGradesTab() {
               <hr />
               <Nav.Item>
                 <Nav.Link eventKey="Y4S2">
-                  <span title="Year 4 Semester 2 (Academic Year 2025/26)">(Future) Y4S2 (Jan &ndash; May 2026)</span>
+                  <span title="Year 4 Semester 2 (Academic Year 2025/26)">Y4S2 (Jan &ndash; May 2026)</span>
                 </Nav.Link>
               </Nav.Item>
             </Nav>
@@ -455,6 +455,12 @@ export default function UniGradesTab() {
               </Tab.Pane>
               <Tab.Pane eventKey="Y4S1">
                 <TotalUnits units={22} />
+                <p>
+                  <strong>Award: </strong>
+                  <span style={{ fontWeight: 600 }}>
+                    <a href="/#awards#academic-achievements">Dean's List, AY2025/2026 Semester 1</a>
+                  </span>
+                </p>
                 <GradeTable>
                   <GradeEntry course="CS4243 Computer Vision and Pattern Recognition" grade="A">
                     <UnitsBadge />
